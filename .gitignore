@@ -1,0 +1,21 @@
+.DS_Store
+
+# Local design/source materials not needed for the website repo
+Case studies/
+Komponenty/
+pro 3/
+proj 2/
+projekt 1/
+
+# Raw exports and local working files
+Frame *.pdf
+Frame *.png
+Strona*.pdf
+frame1.png
+strona_glowna.png
+Group 4.png
+mock_*.png
+paula.jpg
+
+# Local backups
+assets/projects/p1/new-case/*.backup.png
