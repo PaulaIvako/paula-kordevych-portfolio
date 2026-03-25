@@ -174,11 +174,11 @@ button:focus-visible {
 
 .hero {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 70px;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: 44px;
   margin-bottom: 70px;
-  align-items: end;
-  min-height: 680px;
+  align-items: center;
+  min-height: 700px;
   padding: 0;
 }
 
@@ -187,8 +187,8 @@ button:focus-visible {
 }
 
 .hero-kicker {
-  margin: 0 0 14px;
-  font-size: 11px;
+  margin: 0 0 18px;
+  font-size: 13px;
   letter-spacing: 0.22em;
   color: #74665c;
 }
@@ -200,11 +200,12 @@ button:focus-visible {
 }
 
 .hero-left {
-  padding: 0 10px;
+  padding: 62px 10px 0;
 }
 
 .hero-right {
-  padding: 0 10px 18px;
+  padding: 86px 10px 0;
+  align-self: center;
 }
 
 h1,
@@ -224,13 +225,13 @@ h1 {
   margin: 0;
   font-family: "Aboreto", serif;
   font-weight: 400;
-  font-size: clamp(54px, 6vw, 78px);
-  line-height: 1.02;
-  letter-spacing: 0.02em;
+  font-size: clamp(72px, 8.5vw, 96px);
+  line-height: 0.94;
+  letter-spacing: 0.015em;
 }
 
 .hero-lead {
-  margin: 0;
+  margin: 56px 0 0;
   font-size: 14px;
   line-height: 1.72;
   color: var(--muted);
@@ -1543,10 +1544,9 @@ html.js .reveal.in {
   }
 
   .hero {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    margin-bottom: 96px;
-    padding-top: 34px;
+    display: block;
+    margin-bottom: 88px;
+    padding-top: 28px;
     min-height: 0;
   }
 
@@ -1574,33 +1574,31 @@ html.js .reveal.in {
     bottom: 0;
   }
 
-  .hero-left,
-  .hero-right {
-    max-width: none;
-    width: 100%;
-  }
-
   .hero-left {
-    max-width: 500px;
-  }
-
-  .hero-right {
-    max-width: 420px;
-    padding-top: 0;
+    max-width: 460px;
+    width: 100%;
+    padding: 0 24px 0 18px;
   }
 
   h1 {
-    font-size: clamp(48px, 6.4vw, 64px);
+    font-size: clamp(46px, 6vw, 60px);
+    line-height: 0.95;
+  }
+
+  .hero-lead,
+  .hero-proof {
+    max-width: 34ch;
   }
 
   .hero-cta {
+    margin-top: 24px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 10px;
+    gap: 12px;
   }
 
   .hero-cta .btn {
-    min-width: 180px;
+    min-width: 220px;
     white-space: nowrap;
     padding-inline: 16px;
     font-size: 11px;
@@ -1658,7 +1656,7 @@ html.js .reveal.in {
 
 @media (max-width: 760px) {
   .layout {
-    padding: 64px 22px 80px;
+    padding: 64px 18px 80px;
   }
 
   .hero,
@@ -1668,26 +1666,33 @@ html.js .reveal.in {
   }
 
   .hero {
-    margin-bottom: 62px;
+    margin-bottom: 86px;
     padding-top: 22px;
   }
 
   .menu {
-    gap: 6px;
-    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    padding: 0;
     font-size: 11px;
-    justify-content: center;
+    justify-content: stretch;
     width: 100%;
     max-width: none;
-    overflow-x: visible;
+    overflow-x: hidden;
   }
 
   .menu a {
-    padding: 10px 10px;
+    min-height: 60px;
+    padding: 0 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
 
   .menu a + a::before {
-    left: -4px;
+    left: 0;
     height: 14px;
   }
 
@@ -1723,15 +1728,12 @@ html.js .reveal.in {
   }
 
   .hero-left {
-    padding: 0 18px 0 10px;
-  }
-
-  .hero-right {
-    padding: 10px 10px 0;
+    max-width: none;
+    padding: 0 22px;
   }
 
   h1 {
-    font-size: clamp(46px, 13vw, 58px);
+    font-size: clamp(36px, 11vw, 48px);
     line-height: 0.98;
   }
 
@@ -1744,6 +1746,7 @@ html.js .reveal.in {
     width: 100%;
     min-width: 0;
     max-width: 420px;
+    margin-inline: auto;
   }
 
   .section {
@@ -1799,10 +1802,15 @@ html.js .reveal.in {
     right: 18px;
     bottom: 18px;
     padding: 0;
-    flex-direction: row;
-    align-items: end;
-    justify-content: space-between;
-    gap: 14px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    text-align: left;
+  }
+
+  .project-meta > div {
+    width: 100%;
   }
 
   .project-meta h3 {
@@ -1810,7 +1818,7 @@ html.js .reveal.in {
   }
 
   .thumb {
-    height: 330px;
+    height: 360px;
     aspect-ratio: auto;
   }
 
@@ -1820,7 +1828,7 @@ html.js .reveal.in {
   }
 
   .project-desc {
-    max-width: 30ch;
+    max-width: none;
     font-size: 13px;
     line-height: 1.5;
   }
@@ -1836,10 +1844,10 @@ html.js .reveal.in {
   }
 
   .project-meta .btn {
-    min-width: 84px;
+    min-width: 96px;
     padding: 8px 14px;
     min-height: 40px;
-    align-self: flex-end;
+    align-self: center;
   }
 
   .case-page {
@@ -1886,11 +1894,6 @@ html.js .reveal.in {
   .portrait {
     width: min(220px, 100%);
     margin: 0 auto 4px;
-  }
-
-  .menu {
-    gap: 14px;
-    font-size: 11px;
   }
 
   .contact-actions {
@@ -1941,29 +1944,24 @@ html.js .reveal.in {
 
 @media (max-width: 680px) {
   .menu {
-    justify-content: center;
-    gap: 0;
-    padding: 0 12px;
+    padding: 0;
   }
 
   .menu a {
-    padding: 10px 8px;
+    min-height: 58px;
+    padding: 0 4px;
   }
 
   .menu a + a::before {
-    left: -2px;
+    left: 0;
   }
 
   .hero-left {
-    padding: 0 16px;
-  }
-
-  .hero-right {
-    padding: 12px 16px 0;
+    padding: 0 20px;
   }
 
   h1 {
-    font-size: clamp(42px, 12.4vw, 54px);
+    font-size: clamp(34px, 10.8vw, 44px);
   }
 
   .hero-cta {
@@ -1993,9 +1991,10 @@ html.js .reveal.in {
     bottom: 16px;
     padding: 0;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-end;
     gap: 12px;
+    text-align: left;
   }
 
   .project-meta h3 {
@@ -2003,17 +2002,17 @@ html.js .reveal.in {
   }
 
   .project-desc {
-    max-width: 28ch;
+    max-width: none;
     font-size: 14px;
   }
 
   .project-meta .btn {
-    align-self: flex-start;
+    align-self: center;
     min-width: 96px;
   }
 
   .thumb {
-    height: 336px;
+    height: 382px;
   }
 
   .visual-work-intro {
@@ -2046,18 +2045,13 @@ html.js .reveal.in {
   }
 
   .menu {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0;
-    padding: 0 6px;
+    padding: 0;
     font-size: 10px;
-    justify-content: stretch;
-    width: 100%;
-    max-width: none;
   }
 
   .menu a {
-    padding: 10px 4px;
+    min-height: 56px;
+    padding: 0 4px;
     text-align: center;
   }
 
@@ -2086,15 +2080,11 @@ html.js .reveal.in {
   }
 
   .hero-left {
-    padding: 0 18px 0 16px;
-  }
-
-  .hero-right {
-    padding: 8px 16px 0;
+    padding: 0 20px;
   }
 
   h1 {
-    font-size: clamp(40px, 12vw, 50px);
+    font-size: clamp(32px, 10.4vw, 40px);
   }
 
   .project-meta h3 {
@@ -2102,20 +2092,25 @@ html.js .reveal.in {
   }
 
   .project-desc {
-    max-width: 24ch;
+    max-width: none;
     font-size: 13px;
     line-height: 1.45;
   }
 
   .thumb {
-    height: 312px;
+    height: 396px;
   }
 }
 
 @media (max-width: 420px) {
+  .layout {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
   .menu a {
-    padding: 10px 3px;
-    font-size: 9.5px;
+    padding: 0 3px;
+    font-size: 9.2px;
   }
 
   .menu a + a::before {
@@ -2146,15 +2141,11 @@ html.js .reveal.in {
   }
 
   .hero-left {
-    padding: 0 18px 0 18px;
-  }
-
-  .hero-right {
-    padding: 8px 18px 0;
+    padding: 0 18px;
   }
 
   h1 {
-    font-size: clamp(36px, 11vw, 44px);
+    font-size: clamp(30px, 10vw, 36px);
   }
 
   h2 {
@@ -2162,14 +2153,14 @@ html.js .reveal.in {
   }
 
   .thumb {
-    height: 296px;
+    height: 408px;
   }
 }
 
 @media (max-width: 360px) {
   .menu a {
-    padding: 10px 2px;
-    font-size: 8.6px;
+    padding: 0 2px;
+    font-size: 8.3px;
   }
 
   .decor-circles {
@@ -2178,15 +2169,11 @@ html.js .reveal.in {
   }
 
   .hero-left {
-    padding: 0 14px 0 14px;
-  }
-
-  .hero-right {
-    padding: 8px 14px 0;
+    padding: 0 16px;
   }
 
   h1 {
-    font-size: 35px;
+    font-size: 28px;
   }
 
   .project-meta h3 {
@@ -2194,7 +2181,7 @@ html.js .reveal.in {
   }
 
   .thumb {
-    height: 286px;
+    height: 416px;
   }
 }
 
