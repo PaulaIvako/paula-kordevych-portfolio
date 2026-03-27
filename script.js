@@ -3,6 +3,8 @@ document.documentElement.classList.add('js');
 const topButton = document.querySelector('.scroll-top');
 const revealItems = document.querySelectorAll('.reveal');
 const homeLinks = document.querySelectorAll('.menu a[href$="#top"]');
+const hero = document.querySelector('.hero-gradient-mode');
+const pageGradient = document.querySelector('.page-gradient');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 const toggleTopButton = () => {
@@ -49,4 +51,30 @@ if (!prefersReducedMotion) {
   revealItems.forEach((item) => observer.observe(item));
 } else {
   revealItems.forEach((item) => item.classList.add('in'));
+}
+
+if (pageGradient && !prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
+  const gradientScope = document.documentElement;
+
+  const setGradientPosition = (x, y) => {
+    gradientScope.style.setProperty('--hero-gx', `${Math.max(12, Math.min(88, x))}%`);
+    gradientScope.style.setProperty('--hero-gy', `${Math.max(12, Math.min(82, y))}%`);
+  };
+
+  const updatePageGradient = (event) => {
+    const x = (event.clientX / window.innerWidth) * 100;
+    const y = (event.clientY / window.innerHeight) * 100;
+    setGradientPosition(x, y);
+  };
+
+  const resetPageGradient = () => {
+    setGradientPosition(74, 26);
+  };
+
+  window.addEventListener('mousemove', updatePageGradient);
+  window.addEventListener('mouseleave', resetPageGradient);
+  resetPageGradient();
+} else if (pageGradient || hero) {
+  document.documentElement.style.setProperty('--hero-gx', '74%');
+  document.documentElement.style.setProperty('--hero-gy', '26%');
 }

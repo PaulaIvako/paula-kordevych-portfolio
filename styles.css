@@ -56,6 +56,52 @@ body::after {
   display: none;
 }
 
+.page-gradient {
+  display: none;
+}
+
+body.homepage-gradient-mode .page-gradient {
+  display: block;
+  position: fixed;
+  inset: -10%;
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.96;
+  background:
+    radial-gradient(circle at var(--hero-gx, 74%) var(--hero-gy, 26%), rgba(229, 119, 185, 0.14) 0, rgba(229, 119, 185, 0.09) 18%, rgba(229, 119, 185, 0.025) 38%, transparent 56%),
+    radial-gradient(circle at calc(var(--hero-gx, 74%) - 28%) calc(var(--hero-gy, 26%) + 18%), rgba(83, 115, 243, 0.16) 0, rgba(83, 115, 243, 0.1) 20%, rgba(83, 115, 243, 0.025) 40%, transparent 60%),
+    radial-gradient(circle at 18% 74%, rgba(83, 115, 243, 0.11) 0, rgba(83, 115, 243, 0.05) 26%, transparent 52%),
+    radial-gradient(circle at 72% 62%, rgba(251, 225, 156, 0.12) 0, rgba(251, 225, 156, 0.06) 24%, transparent 46%),
+    radial-gradient(circle at 54% 22%, rgba(246, 239, 220, 0.82) 0, rgba(246, 239, 220, 0.2) 32%, transparent 66%);
+  filter: blur(32px);
+}
+
+body.homepage-gradient-mode .page-gradient::before,
+body.homepage-gradient-mode .page-gradient::after {
+  content: "";
+  position: absolute;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+body.homepage-gradient-mode .page-gradient::before {
+  width: 68%;
+  height: 60%;
+  left: calc(var(--hero-gx, 74%) - 42%);
+  top: calc(var(--hero-gy, 26%) - 14%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0, rgba(255, 255, 255, 0.08) 42%, transparent 78%);
+  filter: blur(42px);
+}
+
+body.homepage-gradient-mode .page-gradient::after {
+  width: 66%;
+  height: 66%;
+  left: -2%;
+  bottom: -2%;
+  background: radial-gradient(circle, rgba(255, 249, 236, 0.4) 0, rgba(255, 249, 236, 0.14) 38%, transparent 72%);
+  filter: blur(48px);
+}
+
 .decor {
   position: fixed;
   inset: 0;
@@ -170,6 +216,8 @@ button:focus-visible {
   max-width: 1040px;
   margin: 0 auto;
   padding: 84px 24px 110px;
+  position: relative;
+  z-index: 1;
 }
 
 .hero {
@@ -180,10 +228,22 @@ button:focus-visible {
   align-items: center;
   min-height: 700px;
   padding: 0;
+  position: relative;
+  overflow: visible;
+  isolation: isolate;
 }
 
 .hero::before {
   display: none;
+}
+
+.hero-gradient {
+  display: none;
+}
+
+.hero-gradient-mode .hero-left,
+.hero-gradient-mode .hero-right {
+  z-index: 1;
 }
 
 .hero-kicker {
@@ -1575,19 +1635,19 @@ html.js .reveal.in {
   }
 
   .hero-left {
-    max-width: 460px;
+    max-width: 520px;
     width: 100%;
-    padding: 0 24px 0 18px;
+    padding: 0 28px 0 22px;
   }
 
   h1 {
-    font-size: clamp(46px, 6vw, 60px);
+    font-size: clamp(42px, 5.6vw, 56px);
     line-height: 0.95;
   }
 
   .hero-lead,
   .hero-proof {
-    max-width: 34ch;
+    max-width: 32ch;
   }
 
   .hero-cta {
@@ -1598,7 +1658,7 @@ html.js .reveal.in {
   }
 
   .hero-cta .btn {
-    min-width: 220px;
+    min-width: 240px;
     white-space: nowrap;
     padding-inline: 16px;
     font-size: 11px;
@@ -1680,9 +1740,11 @@ html.js .reveal.in {
     width: 100%;
     max-width: none;
     overflow-x: hidden;
+    align-items: stretch;
   }
 
   .menu a {
+    width: 100%;
     min-height: 60px;
     padding: 0 6px;
     display: flex;
@@ -1729,23 +1791,25 @@ html.js .reveal.in {
 
   .hero-left {
     max-width: none;
-    padding: 0 22px;
+    padding: 0 24px;
   }
 
   h1 {
-    font-size: clamp(36px, 11vw, 48px);
+    font-size: clamp(34px, 10.2vw, 44px);
     line-height: 0.98;
+    max-width: 7ch;
   }
 
   .hero-cta {
     width: 100%;
     align-items: center;
+    justify-content: center;
   }
 
   .hero-cta .btn {
     width: 100%;
     min-width: 0;
-    max-width: 420px;
+    max-width: 360px;
     margin-inline: auto;
   }
 
@@ -1818,7 +1882,7 @@ html.js .reveal.in {
   }
 
   .thumb {
-    height: 360px;
+    height: 392px;
     aspect-ratio: auto;
   }
 
@@ -1848,6 +1912,7 @@ html.js .reveal.in {
     padding: 8px 14px;
     min-height: 40px;
     align-self: center;
+    margin-top: 4px;
   }
 
   .case-page {
@@ -1957,16 +2022,18 @@ html.js .reveal.in {
   }
 
   .hero-left {
-    padding: 0 20px;
+    padding: 0 22px;
   }
 
   h1 {
-    font-size: clamp(34px, 10.8vw, 44px);
+    font-size: clamp(32px, 9.8vw, 40px);
+    max-width: 6.8ch;
   }
 
   .hero-cta {
     width: 100%;
     align-items: center;
+    justify-content: center;
   }
 
   .hero-cta .btn {
@@ -1998,7 +2065,7 @@ html.js .reveal.in {
   }
 
   .project-meta h3 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .project-desc {
@@ -2012,7 +2079,7 @@ html.js .reveal.in {
   }
 
   .thumb {
-    height: 382px;
+    height: 408px;
   }
 
   .visual-work-intro {
@@ -2080,11 +2147,12 @@ html.js .reveal.in {
   }
 
   .hero-left {
-    padding: 0 20px;
+    padding: 0 22px;
   }
 
   h1 {
-    font-size: clamp(32px, 10.4vw, 40px);
+    font-size: clamp(30px, 9.4vw, 38px);
+    max-width: 6.7ch;
   }
 
   .project-meta h3 {
@@ -2098,7 +2166,7 @@ html.js .reveal.in {
   }
 
   .thumb {
-    height: 396px;
+    height: 420px;
   }
 }
 
@@ -2108,9 +2176,17 @@ html.js .reveal.in {
     padding-right: 14px;
   }
 
+  .topbar {
+    height: 58px;
+  }
+
+  .menu {
+    width: 100%;
+  }
+
   .menu a {
-    padding: 0 3px;
-    font-size: 9.2px;
+    padding: 0 2px;
+    font-size: 9px;
   }
 
   .menu a + a::before {
@@ -2141,26 +2217,42 @@ html.js .reveal.in {
   }
 
   .hero-left {
-    padding: 0 18px;
+    padding: 0 20px;
   }
 
   h1 {
-    font-size: clamp(30px, 10vw, 36px);
+    font-size: clamp(28px, 9.2vw, 34px);
+    max-width: 6.4ch;
   }
 
   h2 {
-    font-size: 34px;
+    font-size: 30px;
   }
 
   .thumb {
-    height: 408px;
+    height: 428px;
+  }
+
+  .project-meta {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+  }
+
+  .project-meta h3 {
+    font-size: 24px;
+  }
+
+  .project-desc {
+    font-size: 12px;
+    line-height: 1.45;
   }
 }
 
 @media (max-width: 360px) {
   .menu a {
-    padding: 0 2px;
-    font-size: 8.3px;
+    padding: 0 1px;
+    font-size: 8px;
   }
 
   .decor-circles {
@@ -2169,11 +2261,12 @@ html.js .reveal.in {
   }
 
   .hero-left {
-    padding: 0 16px;
+    padding: 0 18px;
   }
 
   h1 {
-    font-size: 28px;
+    font-size: 26px;
+    max-width: 6.2ch;
   }
 
   .project-meta h3 {
@@ -2181,7 +2274,7 @@ html.js .reveal.in {
   }
 
   .thumb {
-    height: 416px;
+    height: 436px;
   }
 }
 
