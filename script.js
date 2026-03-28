@@ -53,7 +53,7 @@ if (!prefersReducedMotion) {
   revealItems.forEach((item) => item.classList.add('in'));
 }
 
-if (pageGradient && !prefersReducedMotion && window.matchMedia('(pointer: fine)').matches) {
+if (pageGradient && !prefersReducedMotion) {
   const gradientScope = document.documentElement;
 
   const setGradientPosition = (x, y) => {
@@ -72,7 +72,12 @@ if (pageGradient && !prefersReducedMotion && window.matchMedia('(pointer: fine)'
   };
 
   window.addEventListener('mousemove', updatePageGradient);
-  window.addEventListener('mouseleave', resetPageGradient);
+  window.addEventListener('pointermove', (event) => {
+    if (event.pointerType === 'touch') return;
+    updatePageGradient(event);
+  });
+  document.addEventListener('mouseleave', resetPageGradient);
+
   resetPageGradient();
 } else if (pageGradient || hero) {
   document.documentElement.style.setProperty('--hero-gx', '74%');

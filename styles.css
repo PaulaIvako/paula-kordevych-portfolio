@@ -1517,9 +1517,10 @@ html.js .reveal.in {
 }
 
 .scroll-top {
-  position: fixed;
-  right: 26px;
-  bottom: 24px;
+    position: fixed;
+    right: 26px;
+    bottom: 24px;
+    z-index: 60;
   width: 82px;
   height: 82px;
   border-radius: 50%;
@@ -1712,6 +1713,28 @@ html.js .reveal.in {
   .pylio-screen-gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .scroll-top {
+    display: none;
+  }
+}
+
+@media (min-width: 761px) and (max-width: 1024px) {
+  .skills .skill-split:not(.skill-split--single) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skill-split--single {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .scroll-top {
+    display: grid;
+    right: 18px;
+    bottom: 18px;
+    width: 56px;
+    height: 56px;
+  }
 }
 
 @media (max-width: 760px) {
@@ -1837,6 +1860,14 @@ html.js .reveal.in {
     min-height: 190px;
   }
 
+  .skill-card {
+    padding: 24px 20px;
+  }
+
+  .skill-card h3 {
+    font-size: 28px;
+  }
+
   .service-card {
     min-height: auto;
     padding: 22px 16px;
@@ -1867,7 +1898,7 @@ html.js .reveal.in {
     bottom: 18px;
     padding: 0;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-end;
     gap: 12px;
     text-align: left;
@@ -1911,7 +1942,7 @@ html.js .reveal.in {
     min-width: 96px;
     padding: 8px 14px;
     min-height: 40px;
-    align-self: center;
+    align-self: flex-start;
     margin-top: 4px;
   }
 
@@ -1974,10 +2005,7 @@ html.js .reveal.in {
   }
 
   .scroll-top {
-    right: 16px;
-    bottom: 16px;
-    width: 46px;
-    height: 46px;
+    display: none;
   }
 
   .pylio-grid--two,
@@ -2058,7 +2086,7 @@ html.js .reveal.in {
     bottom: 16px;
     padding: 0;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-end;
     gap: 12px;
     text-align: left;
@@ -2074,7 +2102,7 @@ html.js .reveal.in {
   }
 
   .project-meta .btn {
-    align-self: center;
+    align-self: flex-start;
     min-width: 96px;
   }
 
@@ -2167,6 +2195,24 @@ html.js .reveal.in {
 
   .thumb {
     height: 420px;
+  }
+
+  .tool-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .tool-card {
+    min-height: auto;
+    padding: 22px 18px 20px;
+  }
+
+  .skill-split {
+    gap: 16px;
+  }
+
+  .skill-card {
+    padding: 22px 18px;
   }
 }
 
