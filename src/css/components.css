@@ -1,0 +1,147 @@
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: transparent;
+  padding: 10px 24px;
+  min-height: 44px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+  text-decoration: none;
+  color: var(--text);
+}
+
+.btn:hover {
+  background: var(--surface-strong);
+  border-color: var(--text);
+  color: var(--text);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary {
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #3d5de2;
+  border-color: #3d5de2;
+  color: #fff;
+  box-shadow: 0 14px 26px rgba(83, 115, 243, 0.18);
+}
+
+.btn-rect {
+  border-radius: 10px;
+  padding: 10px 24px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  background: transparent;
+}
+
+.btn-rect:hover {
+  background: rgba(83, 115, 243, 0.95);
+  border-color: rgba(83, 115, 243, 0.95);
+  color: #fff;
+  box-shadow: 0 14px 26px rgba(83, 115, 243, 0.18);
+}
+
+/* Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: transparent;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(32, 22, 15, 0.7);
+}
+
+.badge--blue {
+  border-color: rgba(83, 115, 243, 0.3);
+  background: rgba(83, 115, 243, 0.08);
+}
+
+.badge--pink {
+  border-color: rgba(229, 119, 185, 0.3);
+  background: rgba(229, 119, 185, 0.08);
+}
+
+.badge--green {
+  border-color: rgba(63, 92, 59, 0.25);
+  background: rgba(111, 143, 106, 0.08);
+}
+
+/* Cards */
+.card {
+  padding: 28px 26px;
+  border-radius: 20px;
+  border: 1px solid var(--surface-border);
+  background: var(--surface);
+  box-shadow: var(--shadow-sm);
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(40px) saturate(180%);
+  -webkit-backdrop-filter: blur(40px) saturate(180%);
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: var(--shadow-md);
+}
+
+/* Scroll to top button */
+.scroll-top {
+  position: fixed;
+  right: 26px;
+  bottom: 24px;
+  z-index: 60;
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  border: none;
+  display: grid;
+  place-items: center;
+  background: var(--accent-pink);
+  box-shadow: 0 18px 36px rgba(229, 119, 185, 0.22);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease, transform 160ms ease;
+  cursor: pointer;
+}
+
+.scroll-top::before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: translateY(1px) rotate(-45deg);
+}
+
+.scroll-top:hover {
+  transform: translateY(-2px);
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}

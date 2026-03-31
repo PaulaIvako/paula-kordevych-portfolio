@@ -1,5 +1,13 @@
 .DS_Store
 
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build output
+dist/
+*.log
+
 # Local design/source materials not needed for the website repo
 Case studies/
 Komponenty/
@@ -19,3 +27,13 @@ paula.jpg
 
 # Local backups
 assets/projects/p1/new-case/*.backup.png
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test files
+coverage/
+.nyc_output/

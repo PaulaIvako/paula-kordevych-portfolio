@@ -1,0 +1,18 @@
+/* Main CSS entry point - imports all modules */
+@import './variables.css';
+@import './base.css';
+@import './layout.css';
+@import './components.css';
+@import './sections/hero.css';
+@import './sections/projects.css';
+@import './sections/visual-work.css';
+@import './sections/process.css';
+@import './sections/skills.css';
+@import './sections/about.css';
+@import './sections/pov.css';
+@import './sections/experience.css';
+@import './sections/courses.css';
+@import './sections/contact.css';
+@import './sections/case-study.css';
+@import './animations.css';
+@import './responsive.css';

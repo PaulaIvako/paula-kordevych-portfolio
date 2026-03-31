@@ -2,3 +2,16 @@
 .github
 .DS_Store
 README.md
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/

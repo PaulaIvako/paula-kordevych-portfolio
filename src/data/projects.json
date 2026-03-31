@@ -1,0 +1,205 @@
+{
+  "meta": {
+    "siteName": "Portfolio | Paula Kordevych",
+    "siteDescription": "Portfolio UX/UI Designerki Pauli Kordevych: case study, proces pracy, umiejętności i kontakt.",
+    "author": "Paula Kordevych",
+    "themeColor": "#F4F2EA"
+  },
+  "navigation": {
+    "items": [
+      { "label": "Strona główna", "href": "index.html", "id": "home" },
+      { "label": "Projekty", "href": "index.html#projekty", "id": "projects" },
+      { "label": "O mnie", "href": "index.html#o-mnie", "id": "about" },
+      { "label": "Kontakt", "href": "index.html#kontakt", "id": "contact" }
+    ]
+  },
+  "hero": {
+    "kicker": "UX/UI & GRAPHIC DESIGNERKA",
+    "title": "PAULA<br />KORDEVYCH",
+    "lead": "Projektuję intuicyjne interfejsy i spójne rozwiązania wizualne.",
+    "proof": "Łączę UX/UI i grafikę, tworząc produkty, które są czytelne, estetyczne i pomagają użytkownikowi szybko podejmować decyzje.",
+    "ctas": [
+      { "label": "Zobacz case studies", "href": "#projekty", "primary": true },
+      { "label": "Projekty graficzne", "href": "#visual-work", "primary": false }
+    ]
+  },
+  "projects": [
+    {
+      "id": "pylio",
+      "title": "Pylio",
+      "type": "Mobile App",
+      "tags": ["UX/UI", "Health"],
+      "description": "Aplikacja mobilna, która pomaga osobom z alergią szybko ocenić ryzyko i podejmować codzienne decyzje na podstawie poziomu pyłków i objawów.",
+      "color": "yellow",
+      "themeColor": "#F4F2EA",
+      "featured": true,
+      "caseStudy": {
+        "subtitle": "Aplikacja mobilna, która pomaga osobom z alergią monitorować poziom pyłków i podejmować codzienne decyzje na podstawie aktualnego ryzyka oraz objawów.",
+        "problem": "Jak uprościć interpretację danych o pyleniu i zamienić je w decyzję.",
+        "scope": "UX research, product thinking, flow, UI, design system",
+        "images": [
+          "CS - Pylio_1.png",
+          "CS - Pylio_2.png", 
+          "CS - Pylio_3.png",
+          "CS - Pylio_4.png",
+          "CS - Pylio_5.png",
+          "CS - Pylio_6.png",
+          "CS - Pylio_7.png",
+          "CS - Pylio_8.png"
+        ]
+      }
+    },
+    {
+      "id": "nimbus",
+      "title": "Nimbus",
+      "type": "Web App",
+      "tags": ["UX Research", "Problem solving"],
+      "description": "Koncepcja aplikacji pomagającej szybko zidentyfikować problem rośliny i dobrać odpowiednie działania pielęgnacyjne.",
+      "color": "green",
+      "themeColor": "#FFFCEE",
+      "featured": true,
+      "caseStudy": {
+        "subtitle": "Koncepcja aplikacji pomagającej szybko zidentyfikować problem rośliny i dobrać odpowiednie działania pielęgnacyjne.",
+        "problem": "Użytkownik potrzebuje szybkiej diagnozy i jasnych zaleceń.",
+        "scope": "UX research, flow, UI, struktura informacji",
+        "reflection": "W projekcie Nimbus skupiłam się na uproszczeniu procesu diagnozy roślin poprzez redukcję złożonych informacji i wprowadzenie czytelnych, wizualnych wyborów, które wspierają decyzje użytkownika.",
+        "images": [
+          "CS - Nimbus_1.png",
+          "CS - Nimbus_2.png",
+          "CS - Nimbus_3.png", 
+          "CS - Nimbus_4.png",
+          "CS - Nimbus_5.png",
+          "CS - Nimbus_6.png"
+        ]
+      }
+    },
+    {
+      "id": "hawktech",
+      "title": "HawkTech",
+      "type": "Mobile App",
+      "tags": ["UX/UI", "E-commerce"],
+      "description": "Projekt UX/UI aplikacji e-commerce zaprojektowanej pod szybkie decyzje zakupowe.",
+      "color": "purple", 
+      "themeColor": "#4A3D61",
+      "featured": true,
+      "caseStudy": {
+        "subtitle": "Projekt UX/UI aplikacji e-commerce zaprojektowanej pod szybkie decyzje zakupowe.",
+        "problem": "Zakupy produktów gamingowych powinny być szybsze i bardziej intuicyjne.",
+        "scope": "UX/UI, architektura zakupowa, filtracja, visual system",
+        "reflection": "Hawktech to mój pierwszy projekt UX/UI, w którym uczyłam się procesu projektowego i budowania czytelnego interfejsu jako punktu wyjścia do dalszego rozwoju.",
+        "images": [
+          "CS - HawkTech_1.png",
+          "CS - HawkTech_2.png",
+          "CS - HawkTech_3.png",
+          "CS - HawkTech_4.png",
+          "CS - HawkTech_5.png",
+          "CS - HawkTech_6.png"
+        ]
+      }
+    }
+  ],
+  "visualWork": [
+    {
+      "id": "roots",
+      "title": "Roots Hair Care",
+      "category": "Brand identity",
+      "description": "Logo, typografia, paleta kolorów i kierunek wizualny dla kosmetycznej marki hair care.",
+      "image": "assets/projects/visual/roots-1.png",
+      "link": "https://www.behance.net/gallery/194992721/Visual-Identity-Branding-Roots"
+    },
+    {
+      "id": "oddajto",
+      "title": "Oddaj.to",
+      "category": "Brand identity", 
+      "description": "Projekt identyfikacji wizualnej promujący ideę oddawania rzeczy zamiast ich wyrzucania.",
+      "image": "assets/projects/visual/oddajto-1.png",
+      "link": "https://www.behance.net/gallery/246639639/Oddajto-Brand-Identity"
+    }
+  ],
+  "process": {
+    "intro": "Proces dostosowuję do problemu projektowego — poniżej pokazuję jego standardowy przebieg od analizy po wdrożenie.",
+    "steps": [
+      { "index": "01", "title": "Analiza", "description": "Poznanie celu projektu, grupy docelowej i obecnych wyzwań." },
+      { "index": "02", "title": "Research", "description": "Zbieranie inspiracji, benchmarków i kluczowych insightów UX." },
+      { "index": "03", "title": "Wireframe", "description": "Budowanie struktury ekranu i architektury informacji." },
+      { "index": "04", "title": "UI & Visual Design", "description": "Projekt wizualny interfejsu i spójność z identyfikacją marki." },
+      { "index": "05", "title": "Prototyp i testy", "description": "Interaktywna wersja projektu i szybka iteracja na podstawie feedbacku." },
+      { "index": "06", "title": "Przekazanie", "description": "Przekazanie projektu do wdrożenia i dopracowanie detali po feedbacku zespołu." }
+    ]
+  },
+  "skills": {
+    "tools": [
+      { "icon": "F", "name": "Figma", "description": "UX/UI · prototypy" },
+      { "icon": "Ps", "name": "Photoshop", "description": "Grafika · mockupy" },
+      { "icon": "Ai", "name": "Illustrator", "description": "Wektory · ilustracje" },
+      { "icon": "AI", "name": "AI & Low-code Tools", "description": "AI · prototypowanie" }
+    ],
+    "categories": [
+      {
+        "title": "Co wnoszę do projektu",
+        "items": ["upraszczanie informacji", "projektowanie decyzji", "spójne systemy UI", "łączenie UX i UI"]
+      },
+      {
+        "title": "UX",
+        "items": ["User Flow", "Wireframing", "Prototyping", "UX thinking"]
+      },
+      {
+        "title": "UI", 
+        "items": ["Figma", "Design Systems", "Visual Design", "Responsive Design"]
+      }
+    ]
+  },
+  "about": {
+    "kicker": "UX/UI Designerka z podejściem produktowym i doświadczeniem w grafice.",
+    "paragraphs": [
+      "Projektuję produkty cyfrowe, które upraszczają złożone informacje i wspierają użytkownika w podejmowaniu decyzji.",
+      "Łączę UX i warstwę wizualną — dbam nie tylko o funkcjonalność, ale też o spójność i jakość odbioru.",
+      "Najlepiej czuję się w projektach, gdzie design realnie wpływa na doświadczenie użytkownika i cele produktu."
+    ],
+    "portrait": "assets/about/paula.png"
+  },
+  "pov": {
+    "title": "JAK MYŚLĘ JAKO DESIGNER",
+    "paragraphs": [
+      "Skupiam się na tym, jakie decyzje użytkownik musi podjąć i jak interfejs może je ułatwić.",
+      "Upraszczam złożone informacje, redukując przeciążenie poznawcze i prowadząc użytkownika do działania.",
+      "W projektach łączę UX i UI — traktuję kolor, hierarchię i komponenty jako narzędzia komunikacji, nie tylko estetyki."
+    ]
+  },
+  "experience": {
+    "work": {
+      "period": "Doświadczenie",
+      "title": "Grafik komputerowy, WeLearning",
+      "description": "9 miesięcy pracy nad materiałami e-learningowymi, layoutami, key visualami i ekranami do prezentacji. Duży nacisk na czytelność informacji i komunikację wizualną."
+    },
+    "education": {
+      "period": "Edukacja", 
+      "title": "Grafika komputerowa — AHE w Łodzi",
+      "description": "Studia licencjackie ze specjalizacją multimedia, skupione na komunikacji wizualnej, projektowaniu cyfrowym i podstawach projektowania interfejsów."
+    }
+  },
+  "courses": [
+    {
+      "title": "Google UX Design (Coursera)",
+      "badges": [
+        { "label": "Certyfikat", "type": "default" },
+        { "label": "2024", "type": "blue" },
+        { "label": "7 kursów", "type": "pink" }
+      ],
+      "description": "Proces UX, praca w Figma i budowanie prototypów w ramach zadań kursowych.",
+      "certificate": {
+        "image": "assets/certs/google-ux-design-coursera-certyfikat.png",
+        "pdf": "assets/certs/google-ux-design-coursera-certyfikat.pdf"
+      }
+    }
+  ],
+  "contact": {
+    "lead": "Szukasz projektantki UX/UI do pracy nad produktem?",
+    "sublead": "Napisz do mnie.",
+    "email": "kordevych.paula@gmail.com",
+    "socials": [
+      { "label": "Wyślij maila", "href": "mailto:kordevych.paula@gmail.com", "primary": true },
+      { "label": "Behance", "href": "https://www.behance.net/paulakordevych", "primary": false }
+    ]
+  }
+}
