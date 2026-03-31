@@ -4,6 +4,32 @@
 
 Ten projekt to portfolio UX/UI designerki zbudowane z **Vite** (build tool) + **vanilla HTML/CSS/JS**.
 
+### Uruchamianie serwera deweloperskiego
+
+Użyj skryptu `server.sh`:
+
+```bash
+# Uruchom serwer
+./server.sh start
+
+# Otwórz stronę w przeglądarce
+./server.sh open
+
+# Sprawdź logi
+./server.sh logs
+
+# Sprawdź status
+./server.sh status
+
+# Zatrzymaj serwer
+./server.sh stop
+```
+
+Serwer działa w sesji **tmux** (portfolio-server), więc możesz do niej wrócić:
+```bash
+./server.sh attach    # wejdź do sesji (Ctrl+B, D aby wyjść nie zatrzymując serwera)
+```
+
 ### Struktura projektu
 
 ```
@@ -195,9 +221,12 @@ Edytuj `src/css/variables.css`:
 
 ## Budowanie i deploy
 
-### Lokalny development:
+### Lokalny development (użyj skryptu):
 ```bash
-npm run dev
+./server.sh start    # uruchom serwer
+./server.sh open     # otwórz w przeglądarce
+./server.sh logs     # zobacz logi
+./server.sh stop     # zatrzymaj serwer
 ```
 
 ### Budowanie produkcyjne:
@@ -207,7 +236,7 @@ npm run build
 
 Wynik trafia do folderu `dist/`, który jest serwowany przez Nginxa w Dockerze.
 
-### Docker:
+### Docker (produkcja):
 ```bash
 docker build -t portfolio .
 docker run -p 8080:80 portfolio
