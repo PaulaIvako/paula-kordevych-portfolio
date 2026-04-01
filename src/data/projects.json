@@ -1,7 +1,7 @@
 {
   "meta": {
     "siteName": "Portfolio | Paula Kordevych",
-    "siteDescription": "Portfolio UX/UI Designerki Pauli Kordevych: case study, proces pracy, umiejętności i kontakt.",
+    "siteDescription": "Portfolio UX/UI Designerki Pauli Kordevych: case study, proces pracy, umiejętności i kontakt.",
     "author": "Paula Kordevych",
     "themeColor": "#F4F2EA"
   },
@@ -16,8 +16,8 @@
   "hero": {
     "kicker": "UX/UI & GRAPHIC DESIGNERKA",
     "title": "PAULA<br />KORDEVYCH",
-    "lead": "Projektuję intuicyjne interfejsy i spójne rozwiązania wizualne.",
-    "proof": "Łączę UX/UI i grafikę, tworząc produkty, które są czytelne, estetyczne i pomagają użytkownikowi szybko podejmować decyzje.",
+    "lead": "Projektuję intuicyjne interfejsy i spójne rozwiązania wizualne.",
+    "proof": "Łączę UX/UI i grafikę, tworząc produkty, które są czytelne, estetyczne i pomagają użytkownikowi szybko podejmować decyzje.",
     "ctas": [
       { "label": "Zobacz case studies", "href": "#projekty", "primary": true },
       { "label": "Projekty graficzne", "href": "#visual-work", "primary": false }
@@ -29,13 +29,13 @@
       "title": "Pylio",
       "type": "Mobile App",
       "tags": ["UX/UI", "Health"],
-      "description": "Aplikacja mobilna, która pomaga osobom z alergią szybko ocenić ryzyko i podejmować codzienne decyzje na podstawie poziomu pyłków i objawów.",
+      "description": "Aplikacja mobilna, która pomaga osobom z alergią szybko ocenić ryzyko i podejmować codzienne decyzje na podstawie poziomu pyłków i objawów.",
       "color": "yellow",
       "themeColor": "#F4F2EA",
       "featured": true,
       "caseStudy": {
-        "subtitle": "Aplikacja mobilna, która pomaga osobom z alergią monitorować poziom pyłków i podejmować codzienne decyzje na podstawie aktualnego ryzyka oraz objawów.",
-        "problem": "Jak uprościć interpretację danych o pyleniu i zamienić je w decyzję.",
+        "subtitle": "Aplikacja mobilna, która pomaga osobom z alergią monitorować poziom pyłków i podejmować codzienne decyzje na podstawie aktualnego ryzyka oraz objawów.",
+        "problem": "Jak uprościć interpretację danych o pyleniu i zamienić je w decyzję.",
         "scope": "UX research, product thinking, flow, UI, design system",
         "images": [
           "CS - Pylio_1.png",
@@ -58,15 +58,15 @@
       "title": "Nimbus",
       "type": "Web App",
       "tags": ["UX Research", "Problem solving"],
-      "description": "Koncepcja aplikacji pomagającej szybko zidentyfikować problem rośliny i dobrać odpowiednie działania pielęgnacyjne.",
+      "description": "Koncepcja aplikacji pomagającej szybko zidentyfikować problem rośliny i dobrać odpowiednie działania pielęgnacyjne.",
       "color": "green",
       "themeColor": "#FFFCEE",
       "featured": true,
       "caseStudy": {
-        "subtitle": "Koncepcja aplikacji pomagającej szybko zidentyfikować problem rośliny i dobrać odpowiednie działania pielęgnacyjne.",
-        "problem": "Użytkownik potrzebuje szybkiej diagnozy i jasnych zaleceń.",
+        "subtitle": "Koncepcja aplikacji pomagającej szybko zidentyfikować problem rośliny i dobrać odpowiednie działania pielęgnacyjne.",
+        "problem": "Użytkownik potrzebuje szybkiej diagnozy i jasnych zaleceń.",
         "scope": "UX research, flow, UI, struktura informacji",
-        "reflection": "W projekcie Nimbus skupiłam się na uproszczeniu procesu diagnozy roślin poprzez redukcję złożonych informacji i wprowadzenie czytelnych, wizualnych wyborów, które wspierają decyzje użytkownika.",
+        "reflection": "W projekcie Nimbus skupiłam się na uproszczeniu procesu diagnozy roślin poprzez redukcję złożonych informacji i wprowadzenie czytelnych, wizualnych wyborów, które wspierają decyzje użytkownika.",
         "images": [
           "CS - Nimbus_1.png",
           "CS - Nimbus_2.png",
@@ -94,9 +94,9 @@
       "featured": true,
       "caseStudy": {
         "subtitle": "Projekt UX/UI aplikacji e-commerce zaprojektowanej pod szybkie decyzje zakupowe.",
-        "problem": "Zakupy produktów gamingowych powinny być szybsze i bardziej intuicyjne.",
+        "problem": "Zakupy produktów gamingowych powinny być szybsze i bardziej intuicyjne.",
         "scope": "UX/UI, architektura zakupowa, filtracja, visual system",
-        "reflection": "Hawktech to mój pierwszy projekt UX/UI, w którym uczyłam się procesu projektowego i budowania czytelnego interfejsu jako punktu wyjścia do dalszego rozwoju.",
+        "reflection": "Hawktech to mój pierwszy projekt UX/UI, w którym uczyłam się procesu projektowego i budowania czytelnego interfejsu jako punktu wyjścia do dalszego rozwoju.",
         "images": [
           "CS - HawkTech_1.png",
           "CS - HawkTech_2.png",
@@ -115,7 +115,7 @@
       "id": "roots",
       "title": "Roots Hair Care",
       "category": "Brand identity",
-      "description": "Logo, typografia, paleta kolorów i kierunek wizualny dla kosmetycznej marki hair care.",
+      "description": "Logo, typografia, paleta kolorów i kierunek wizualny dla kosmetycznej marki hair care.",
       "image": "assets/projects/visual/roots-1.png",
       "link": "https://www.behance.net/gallery/194992721/Visual-Identity-Branding-Roots"
     },
@@ -131,12 +131,12 @@
   "process": {
     "intro": "Proces dostosowuję do problemu projektowego — poniżej pokazuję jego standardowy przebieg od analizy po wdrożenie.",
     "steps": [
-      { "index": "01", "title": "Analiza", "description": "Poznanie celu projektu, grupy docelowej i obecnych wyzwań." },
-      { "index": "02", "title": "Research", "description": "Zbieranie inspiracji, benchmarków i kluczowych insightów UX." },
-      { "index": "03", "title": "Wireframe", "description": "Budowanie struktury ekranu i architektury informacji." },
-      { "index": "04", "title": "UI & Visual Design", "description": "Projekt wizualny interfejsu i spójność z identyfikacją marki." },
-      { "index": "05", "title": "Prototyp i testy", "description": "Interaktywna wersja projektu i szybka iteracja na podstawie feedbacku." },
-      { "index": "06", "title": "Przekazanie", "description": "Przekazanie projektu do wdrożenia i dopracowanie detali po feedbacku zespołu." }
+      { "index": "01", "title": "Analiza", "description": "Poznanie celu projektu, grupy docelowej i obecnych wyzwań." },
+      { "index": "02", "title": "Research", "description": "Zbieranie inspiracji, benchmarków i kluczowych insightów UX." },
+      { "index": "03", "title": "Wireframe", "description": "Budowanie struktury ekranu i architektury informacji." },
+      { "index": "04", "title": "UI & Visual Design", "description": "Projekt wizualny interfejsu i spójność z identyfikacją marki." },
+      { "index": "05", "title": "Prototyp i testy", "description": "Interaktywna wersja projektu i szybka iteracja na podstawie feedbacku." },
+      { "index": "06", "title": "Przekazanie", "description": "Przekazanie projektu do wdrożenia i dopracowanie detali po feedbacku zespołu." }
     ]
   },
   "skills": {
@@ -164,30 +164,30 @@
   "about": {
     "kicker": "UX/UI Designerka z podejściem produktowym i doświadczeniem w grafice.",
     "paragraphs": [
-      "Projektuję produkty cyfrowe, które upraszczają złożone informacje i wspierają użytkownika w podejmowaniu decyzji.",
-      "Łączę UX i warstwę wizualną — dbam nie tylko o funkcjonalność, ale też o spójność i jakość odbioru.",
-      "Najlepiej czuję się w projektach, gdzie design realnie wpływa na doświadczenie użytkownika i cele produktu."
+      "Projektuję produkty cyfrowe, które upraszczają złożone informacje i wspierają użytkownika w podejmowaniu decyzji.",
+      "Łączę UX i warstwę wizualną — dbam nie tylko o funkcjonalność, ale też o spójność i jakość odbioru.",
+      "Najlepiej czuję się w projektach, gdzie design realnie wpływa na doświadczenie użytkownika i cele produktu."
     ],
     "portrait": "assets/about/paula.png"
   },
   "pov": {
     "title": "JAK MYŚLĘ JAKO DESIGNER",
     "paragraphs": [
-      "Skupiam się na tym, jakie decyzje użytkownik musi podjąć i jak interfejs może je ułatwić.",
-      "Upraszczam złożone informacje, redukując przeciążenie poznawcze i prowadząc użytkownika do działania.",
-      "W projektach łączę UX i UI — traktuję kolor, hierarchię i komponenty jako narzędzia komunikacji, nie tylko estetyki."
+      "Skupiam się na tym, jakie decyzje użytkownik musi podjąć i jak interfejs może je ułatwić.",
+      "Upraszczam złożone informacje, redukując przeciążenie poznawcze i prowadząc użytkownika do działania.",
+      "W projektach łączę UX i UI — traktuję kolor, hierarchię i komponenty jako narzędzia komunikacji, nie tylko estetyki."
     ]
   },
   "experience": {
     "work": {
       "period": "Doświadczenie",
       "title": "Grafik komputerowy, WeLearning",
-      "description": "Praca nad materiałami e-learningowymi, layoutami, key visualami i ekranami do prezentacji. Duży nacisk na czytelność informacji i komunikację wizualną."
+      "description": "Praca nad materiałami e-learningowymi, layoutami, key visualami i ekranami do prezentacji. Duży nacisk na czytelność informacji i komunikację wizualną."
     },
     "education": {
       "period": "Edukacja", 
       "title": "Grafika komputerowa — AHE w Łodzi",
-      "description": "Studia licencjackie ze specjalizacją multimedia, skupione na komunikacji wizualnej, projektowaniu cyfrowym i podstawach projektowania interfejsów."
+      "description": "Studia licencjackie ze specjalizacją multimedia, skupione na komunikacji wizualnej, projektowaniu cyfrowym i podstawach projektowania interfejsów."
     }
   },
   "courses": [
@@ -198,7 +198,7 @@
         { "label": "2024", "type": "blue" },
         { "label": "7 kursów", "type": "pink" }
       ],
-      "description": "Proces UX, praca w Figma i budowanie prototypów w ramach zadań kursowych.",
+      "description": "Proces UX, praca w Figma i budowanie prototypów w ramach zadań kursowych.",
       "certificate": {
         "image": "assets/certs/google-ux-design-coursera-certyfikat.png",
         "pdf": "assets/certs/google-ux-design-coursera-certyfikat.pdf"
