@@ -70,13 +70,13 @@ const images = [
       </div>
     </section>
 
-    <!-- Case Study Content with animations -->
-    <section class="py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-12 lg:px-20">
-      <div class="max-w-5xl mx-auto space-y-8">
+    <!-- Case Study Content with animations - edge to edge on mobile -->
+    <section class="py-12 sm:py-16 md:py-24 px-0 sm:px-6 md:px-12 lg:px-20">
+      <div class="max-w-full sm:max-w-5xl mx-auto space-y-4 sm:space-y-8">
         {images.map((image, index) => (
-          <div class="case-study-slide rounded-2xl overflow-hidden border border-surface-border dark:border-white/[0.12] shadow-lg opacity-0 translate-y-6 bg-surface-strong dark:bg-surface-strong-dark" data-slide-index={index}>
-            <img 
-              src={image.src} 
+          <div class="case-study-slide sm:rounded-2xl overflow-hidden sm:border sm:border-surface-border dark:sm:border-white/[0.12] sm:shadow-lg opacity-0 translate-y-6 bg-surface-strong dark:bg-surface-strong-dark" data-slide-index={index}>
+            <img
+              src={image.src}
               alt={image.alt}
               class="w-full h-auto"
               loading={index < 2 ? 'eager' : 'lazy'}
