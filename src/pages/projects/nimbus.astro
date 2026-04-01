@@ -1,21 +1,93 @@
 ---
-import CaseStudy from '../../layouts/CaseStudy.astro';
+import Layout from '../../layouts/Layout.astro';
+
+// Import all case study images
+const images = [
+  { src: '/assets/projects/p2/new-case/CS - Nimbus_1.png', alt: 'Nimbus - Strona tytułowa' },
+  { src: '/assets/projects/p2/new-case/CS - Nimbus_2.png', alt: 'Nimbus - Kontekst projektu' },
+  { src: '/assets/projects/p2/new-case/CS - Nimbus_3.png', alt: 'Nimbus - Problem i cel' },
+  { src: '/assets/projects/p2/new-case/CS - Nimbus_4.png', alt: 'Nimbus - Research i wnioski' },
+  { src: '/assets/projects/p2/new-case/CS - Nimbus_5.png', alt: 'Nimbus - Persona' },
+  { src: '/assets/projects/p2/new-case/CS - Nimbus_6.png', alt: 'Nimbus - User journey' },
+  { src: '/assets/projects/p2/new-case/CS - Nimbus_7.png', alt: 'Nimbus - Architektura informacji' },
+  { src: '/assets/projects/p2/new-case/CS - Nimbus_8.png', alt: 'Nimbus - User flow' },
+  { src: '/assets/projects/p2/new-case/CS - Nimbus_9.png', alt: 'Nimbus - Wireframes' },
+  { src: '/assets/projects/p2/new-case/CS - Nimbus_10.png', alt: 'Nimbus - UI Design' },
+  { src: '/assets/projects/p2/new-case/CS - Nimbus_11.png', alt: 'Nimbus - Komponenty' },
+  { src: '/assets/projects/p2/new-case/CS - Nimbus_12.png', alt: 'Nimbus - Wnioski' },
+];
 ---
 
-<CaseStudy 
-  title="Nimbus"
-  subtitle="Koncepcja aplikacji pomagającej szybko zidentyfikować problem rośliny i dobrać odpowiednie działania pielęgnacyjne."
-  problem="Użytkownik potrzebuje szybkiej diagnozy i jasnych zaleceń."
-  scope="UX research, flow, UI, struktura informacji"
-  reflection="W projekcie Nimbus skupiłam się na uproszczeniu procesu diagnozy roślin poprzez redukcję złożonych informacji i wprowadzenie czytelnych, wizualnych wyborów, które wspierają decyzje użytkownika."
-  themeColor="#FFFCEE"
-  color="green"
-  images={[
-    "/assets/projects/p2/new-case/CS - Nimbus_1.png",
-    "/assets/projects/p2/new-case/CS - Nimbus_2.png",
-    "/assets/projects/p2/new-case/CS - Nimbus_3.png",
-    "/assets/projects/p2/new-case/CS - Nimbus_4.png",
-    "/assets/projects/p2/new-case/CS - Nimbus_5.png",
-    "/assets/projects/p2/new-case/CS - Nimbus_6.png"
-  ]}
-/>
+<Layout title="Nimbus | Case Study">
+  <main class="bg-bg dark:bg-bg-dark min-h-screen">
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-project-green/30">
+      <div class="max-w-4xl mx-auto text-center">
+        <a href="/#projekty" class="inline-flex items-center gap-2 font-montserrat text-sm text-muted dark:text-gray-300 hover:text-accent-blue transition-colors mb-8">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+          </svg>
+          Powrót do projektów
+        </a>
+        
+        <h1 class="font-aboreto text-4xl md:text-6xl text-text dark:text-text-dark mb-6">
+          Nimbus
+        </h1>
+        
+        <p class="font-montserrat text-lg md:text-xl text-muted dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+          Koncepcja aplikacji pomagającej szybko zidentyfikować problem rośliny i dobrać odpowiednie działania pielęgnacyjne.
+        </p>
+        
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+          <div class="bg-surface-strong dark:bg-surface-strong-dark rounded-xl p-6 border border-surface-border dark:border-white/[0.12]">
+            <p class="font-montserrat text-xs font-medium tracking-wider text-accent-blue mb-2">PROBLEM</p>
+            <p class="font-montserrat text-sm text-text dark:text-text-dark">Użytkownik potrzebuje szybkiej diagnozy i jasnych zaleceń</p>
+          </div>
+          <div class="bg-surface-strong dark:bg-surface-strong-dark rounded-xl p-6 border border-surface-border dark:border-white/[0.12]">
+            <p class="font-montserrat text-xs font-medium tracking-wider text-accent-blue mb-2">ZAKRES</p>
+            <p class="font-montserrat text-sm text-text dark:text-text-dark">UX research, flow, UI, struktura informacji</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Study Content -->
+    <section class="py-16 md:py-24 px-6 md:px-12 lg:px-20">
+      <div class="max-w-5xl mx-auto space-y-8">
+        {images.map((image, index) => (
+          <div class="rounded-2xl overflow-hidden border border-surface-border dark:border-white/[0.12] shadow-lg">
+            <img 
+              src={image.src} 
+              alt={image.alt}
+              class="w-full h-auto"
+              loading={index < 2 ? 'eager' : 'lazy'}
+            />
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <section class="py-16 px-6 md:px-12 lg:px-20 border-t border-black/[0.06] dark:border-white/[0.12]">
+      <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <a href="/projects/hawktech" class="inline-flex items-center gap-2 font-montserrat text-text dark:text-text-dark hover:text-accent-blue transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+          Poprzedni projekt: HawkTech
+        </a>
+        
+        <a href="/#projekty" class="inline-flex items-center gap-2 font-cormorant text-xl text-text dark:text-text-dark hover:text-accent-blue transition-colors">
+          Zobacz wszystkie projekty
+        </a>
+        
+        <a href="/projects/pylio" class="inline-flex items-center gap-2 font-montserrat text-text dark:text-text-dark hover:text-accent-blue transition-colors">
+          Następny projekt: Pylio
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </section>
+  </main>
+</Layout>
