@@ -47,8 +47,9 @@ export default {
         montserrat: ['Montserrat', 'sans-serif']
       },
       fontSize: {
-        'hero': ['clamp(88px, 10vw, 120px)', { lineHeight: '0.9', letterSpacing: '0.02em' }],
-        'h2': ['clamp(48px, 6vw, 72px)', { lineHeight: '1.1', letterSpacing: '0.08em' }],
+        'hero-mobile': ['clamp(48px, 15vw, 88px)', { lineHeight: '0.9', letterSpacing: '0.02em' }],
+        'hero': ['clamp(64px, 10vw, 120px)', { lineHeight: '0.9', letterSpacing: '0.02em' }],
+        'h2': ['clamp(36px, 6vw, 72px)', { lineHeight: '1.1', letterSpacing: '0.08em' }],
         'kicker': ['13px', { lineHeight: '1.4', letterSpacing: '0.22em' }]
       },
       boxShadow: {

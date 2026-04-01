@@ -26,7 +26,7 @@ const images = [
   <link rel="preload" as="image" href="/assets/projects/p1/new-case/CS - Pylio_1.png" fetchpriority="high" slot="head" />
   <main class="bg-bg dark:bg-bg-dark min-h-screen">
     <!-- Hero Section - New Layout -->
-    <section class="pt-8 pb-16 md:pb-24 px-6 md:px-12 lg:px-20 bg-project-yellow/30">
+    <section class="pt-6 sm:pt-8 pb-12 sm:pb-16 md:pb-24 px-4 sm:px-6 md:px-12 lg:px-20 bg-project-yellow/30 overflow-x-hidden">
       <div class="max-w-6xl mx-auto">
         <!-- Back link -->
         <a href="/#projekty" class="inline-flex items-center gap-2 font-montserrat text-sm text-muted dark:text-gray-300 hover:text-accent-blue transition-colors mb-12 md:mb-16">
@@ -40,7 +40,7 @@ const images = [
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-16">
           <!-- Left: Title -->
           <div>
-            <h1 class="font-aboreto text-5xl md:text-7xl lg:text-8xl text-text dark:text-text-dark leading-none">
+            <h1 class="font-aboreto text-4xl sm:text-5xl md:text-7xl lg:text-8xl text-text dark:text-text-dark leading-none break-words">
               Pylio
             </h1>
           </div>
@@ -71,7 +71,7 @@ const images = [
     </section>
 
     <!-- Case Study Content with animations -->
-    <section class="py-16 md:py-24 px-6 md:px-12 lg:px-20">
+    <section class="py-12 sm:py-16 md:py-24 px-4 sm:px-6 md:px-12 lg:px-20">
       <div class="max-w-5xl mx-auto space-y-8">
         {images.map((image, index) => (
           <div class="case-study-slide rounded-2xl overflow-hidden border border-surface-border dark:border-white/[0.12] shadow-lg opacity-0 translate-y-6 bg-surface-strong dark:bg-surface-strong-dark" data-slide-index={index}>
@@ -92,7 +92,7 @@ const images = [
     </section>
 
     <!-- Navigation -->
-    <section class="py-16 px-6 md:px-12 lg:px-20 border-t border-black/[0.06] dark:border-white/[0.12]">
+    <section class="py-12 sm:py-16 px-4 sm:px-6 md:px-12 lg:px-20 border-t border-black/[0.06] dark:border-white/[0.12]">
       <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <a href="/projects/nimbus" class="inline-flex items-center gap-2 font-montserrat text-text dark:text-text-dark hover:text-accent-blue transition-colors">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
