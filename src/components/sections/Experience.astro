@@ -10,6 +10,7 @@ const { experience } = projectsData;
 
   <div class="max-w-5xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Work Experience -->
       <article class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-surface-border dark:border-white/[0.12]">
         <p class="font-montserrat text-xs font-medium tracking-wider text-accent-blue mb-2">
           {experience.work.period}
@@ -17,11 +18,18 @@ const { experience } = projectsData;
         <h3 class="font-montserrat text-base font-medium text-text dark:text-text-dark mb-3">
           {experience.work.title}
         </h3>
+        <!-- Date chip -->
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-accent-blue/10 text-accent-blue border border-accent-blue/20">
+            2022
+          </span>
+        </div>
         <p class="font-montserrat text-sm text-muted dark:text-gray-300 leading-relaxed">
           {experience.work.description}
         </p>
       </article>
 
+      <!-- Education -->
       <article class="bg-surface dark:bg-surface-dark rounded-xl p-6 border border-surface-border dark:border-white/[0.12]">
         <p class="font-montserrat text-xs font-medium tracking-wider text-accent-blue mb-2">
           {experience.education.period}
@@ -29,6 +37,12 @@ const { experience } = projectsData;
         <h3 class="font-montserrat text-base font-medium text-text dark:text-text-dark mb-3">
           {experience.education.title}
         </h3>
+        <!-- Date chip -->
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-pink-500/10 text-pink-600 dark:text-pink-400 border border-pink-500/20">
+            2019-2021
+          </span>
+        </div>
         <p class="font-montserrat text-sm text-muted dark:text-gray-300 leading-relaxed">
           {experience.education.description}
         </p>
