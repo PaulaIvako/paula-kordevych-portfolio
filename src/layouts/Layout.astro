@@ -41,13 +41,38 @@ const {
     <slot />
     
     <!-- Scroll to top button -->
-    <button id="scroll-top" class="fixed bottom-32 right-8 w-12 h-12 rounded-full bg-surface-strong border border-surface-border shadow-lg backdrop-blur-nav opacity-0 invisible transition-all duration-300 hover:scale-110 z-50" aria-label="Wróć do góry">
+    <button id="scroll-top" class="fixed right-8 w-12 h-12 rounded-full bg-surface-strong border border-surface-border shadow-lg backdrop-blur-nav opacity-0 invisible transition-all duration-300 hover:scale-110 z-50" aria-label="Wróć do góry" style="bottom: 2rem;">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-auto text-text" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
       </svg>
     </button>
     
     <script is:inline src="/scripts/theme.js"></script>
+    
+    <script>
+      // Dynamic scroll button positioning
+      const scrollBtn = document.getElementById('scroll-top');
+      const footerOffset = 160; // Distance from footer when at bottom
+      
+      function updateButtonPosition() {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const docHeight = document.documentElement.scrollHeight;
+        const scrollBottom = scrollY + windowHeight;
+        const distanceFromBottom = docHeight - scrollBottom;
+        
+        // If near footer, position higher; otherwise keep low
+        if (distanceFromBottom < footerOffset) {
+          scrollBtn.style.bottom = (footerOffset - distanceFromBottom + 32) + 'px';
+        } else {
+          scrollBtn.style.bottom = '2rem';
+        }
+      }
+      
+      window.addEventListener('scroll', updateButtonPosition, { passive: true });
+      window.addEventListener('resize', updateButtonPosition, { passive: true });
+      updateButtonPosition();
+    </script>
   </body>
 </html>
 
