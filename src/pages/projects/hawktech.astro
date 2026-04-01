@@ -1,6 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
+// SEO Description
+const description = "Case study HawkTech - aplikacja e-commerce dla produktów gamingowych. Zobacz projekt UX/UI, architekturę informacji, system filtracji i visual design.";
+
 // Import all case study images
 const images = [
   { src: '/assets/projects/p3/new-case/CS - HawkTech_1.png', alt: 'HawkTech - Strona tytułowa' },
@@ -14,7 +17,7 @@ const images = [
 ];
 ---
 
-<Layout title="HawkTech | Case Study">
+<Layout title="HawkTech | Case Study" description={description}>
   <main class="bg-bg dark:bg-bg-dark min-h-screen">
     <!-- Hero Section - New Layout -->
     <section class="pt-8 pb-16 md:pb-24 px-6 md:px-12 lg:px-20 bg-project-purple/30">
@@ -61,11 +64,11 @@ const images = [
       </div>
     </section>
 
-    <!-- Case Study Content -->
+    <!-- Case Study Content with animations -->
     <section class="py-16 md:py-24 px-6 md:px-12 lg:px-20">
       <div class="max-w-5xl mx-auto space-y-8">
         {images.map((image, index) => (
-          <div class="rounded-2xl overflow-hidden border border-surface-border dark:border-white/[0.12] shadow-lg">
+          <div class="case-study-slide rounded-2xl overflow-hidden border border-surface-border dark:border-white/[0.12] shadow-lg opacity-0 translate-y-6" data-slide-index={index}>
             <img 
               src={image.src} 
               alt={image.alt}
@@ -100,4 +103,44 @@ const images = [
       </div>
     </section>
   </main>
+
+  <!-- Fade-in animation script -->
+  <script>
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -50px 0px',
+      threshold: 0.1
+    };
+
+    const slideObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('slide-visible');
+          slideObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.case-study-slide').forEach((slide, index) => {
+      slide.style.transitionDelay = `${index * 100}ms`;
+      slideObserver.observe(slide);
+    });
+  </script>
+
+  <style>
+    .case-study-slide {
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .case-study-slide.slide-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .case-study-slide {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+    }
+  </style>
 </Layout>
