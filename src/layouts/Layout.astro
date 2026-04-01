@@ -36,6 +36,9 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+    
+    <!-- Additional head content from pages -->
+    <slot name="head" />
   </head>
   <body class="bg-bg text-text antialiased transition-colors duration-300">
     <slot />

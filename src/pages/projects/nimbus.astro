@@ -22,6 +22,8 @@ const images = [
 ---
 
 <Layout title="Nimbus | Case Study" description={description}>
+  <!-- Preload first image for faster initial paint -->
+  <link rel="preload" as="image" href="/assets/projects/p2/new-case/CS - Nimbus_1.png" fetchpriority="high" slot="head" />
   <main class="bg-bg dark:bg-bg-dark min-h-screen">
     <!-- Hero Section - New Layout -->
     <section class="pt-8 pb-16 md:pb-24 px-6 md:px-12 lg:px-20 bg-project-green/30">
@@ -72,12 +74,17 @@ const images = [
     <section class="py-16 md:py-24 px-6 md:px-12 lg:px-20">
       <div class="max-w-5xl mx-auto space-y-8">
         {images.map((image, index) => (
-          <div class="case-study-slide rounded-2xl overflow-hidden border border-surface-border dark:border-white/[0.12] shadow-lg opacity-0 translate-y-6" data-slide-index={index}>
-            <img 
-              src={image.src} 
+          <div class="case-study-slide rounded-2xl overflow-hidden border border-surface-border dark:border-white/[0.12] shadow-lg opacity-0 translate-y-6 bg-surface-strong dark:bg-surface-strong-dark" data-slide-index={index}>
+            <img
+              src={image.src}
               alt={image.alt}
               class="w-full h-auto"
               loading={index < 2 ? 'eager' : 'lazy'}
+              decoding={index < 2 ? 'sync' : 'async'}
+              fetchpriority={index === 0 ? 'high' : 'auto'}
+              width="1200"
+              height="675"
+              style="aspect-ratio: 16/9;"
             />
           </div>
         ))}
