@@ -10,9 +10,9 @@ const currentPath = Astro.url.pathname;
 ---
 
 <header class="sticky top-0 z-50 h-[62px] border-b border-line dark:border-line-dark bg-nav/70 dark:bg-nav-dark/80 backdrop-blur-nav transition-colors duration-300">
-  <div class="max-w-layout mx-auto h-full flex items-center justify-between px-3 sm:px-6">
-    <!-- Mobile nav only -->
-    <nav class="flex sm:hidden items-center gap-0 text-[10px] tracking-wide" aria-label="Nawigacja mobile">
+  <div class="max-w-layout mx-auto h-full flex items-center px-3 sm:px-6 relative">
+    <!-- Mobile nav centered -->
+    <nav class="flex sm:hidden items-center justify-center gap-0 text-[10px] tracking-wide w-full" aria-label="Nawigacja mobile">
       {navItems.map((item, index) => (
         <>
           {index > 0 && <span class="text-muted/30 px-0.5">|</span>}
@@ -26,7 +26,7 @@ const currentPath = Astro.url.pathname;
       ))}
     </nav>
 
-    <nav class="hidden sm:flex items-center gap-1 text-xs tracking-wide" aria-label="Nawigacja">
+    <nav class="hidden sm:flex items-center gap-1 text-xs tracking-wide mx-auto" aria-label="Nawigacja">
       {navItems.map((item, index) => (
         <>
           {index > 0 && <span class="text-muted/30 px-1">|</span>}
@@ -42,7 +42,7 @@ const currentPath = Astro.url.pathname;
 
     <button
       id="theme-toggle"
-      class="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-surface-strong dark:bg-surface-strong-dark border border-surface-border dark:border-white/[0.12] flex items-center justify-center hover:scale-110 transition-transform flex-shrink-0"
+      class="absolute right-3 sm:right-6 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-surface-strong dark:bg-surface-strong-dark border border-surface-border dark:border-white/[0.12] flex items-center justify-center hover:scale-110 transition-transform"
       aria-label="Przełącz tryb ciemny"
     >
       <span id="theme-icon" class="text-base sm:text-lg">🌙</span>
