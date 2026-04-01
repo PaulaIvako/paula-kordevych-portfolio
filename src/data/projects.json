@@ -7,10 +7,26 @@
   },
   "navigation": {
     "items": [
-      { "label": "Strona główna", "href": "index.html", "id": "home" },
-      { "label": "Projekty", "href": "index.html#projekty", "id": "projects" },
-      { "label": "O mnie", "href": "index.html#o-mnie", "id": "about" },
-      { "label": "Kontakt", "href": "index.html#kontakt", "id": "contact" }
+      {
+        "label": "Strona główna",
+        "href": "index.html",
+        "id": "home"
+      },
+      {
+        "label": "Projekty",
+        "href": "index.html#projekty",
+        "id": "projects"
+      },
+      {
+        "label": "O mnie",
+        "href": "index.html#o-mnie",
+        "id": "about"
+      },
+      {
+        "label": "Kontakt",
+        "href": "index.html#kontakt",
+        "id": "contact"
+      }
     ]
   },
   "hero": {
@@ -19,8 +35,16 @@
     "lead": "Projektuję intuicyjne interfejsy i spójne rozwiązania wizualne.",
     "proof": "Łączę UX/UI i grafikę, tworząc produkty, które są czytelne, estetyczne i pomagają użytkownikowi szybko podejmować decyzje.",
     "ctas": [
-      { "label": "Zobacz case studies", "href": "#projekty", "primary": true },
-      { "label": "Projekty graficzne", "href": "#visual-work", "primary": false }
+      {
+        "label": "Zobacz case studies",
+        "href": "#projekty",
+        "primary": true
+      },
+      {
+        "label": "Projekty graficzne",
+        "href": "#visual-work",
+        "primary": false
+      }
     ]
   },
   "projects": [
@@ -28,7 +52,10 @@
       "id": "pylio",
       "title": "Pylio",
       "type": "Mobile App",
-      "tags": ["UX/UI", "Health"],
+      "tags": [
+        "UX/UI",
+        "Health"
+      ],
       "description": "Aplikacja mobilna, która pomaga osobom z alergią szybko ocenić ryzyko i podejmować codzienne decyzje na podstawie poziomu pyłków i objawów.",
       "color": "yellow",
       "themeColor": "#F4F2EA",
@@ -57,7 +84,10 @@
       "id": "nimbus",
       "title": "Nimbus",
       "type": "Web App",
-      "tags": ["UX Research", "Problem solving"],
+      "tags": [
+        "UX Research",
+        "Problem solving"
+      ],
       "description": "Koncepcja aplikacji pomagającej szybko zidentyfikować problem rośliny i dobrać odpowiednie działania pielęgnacyjne.",
       "color": "green",
       "themeColor": "#FFFCEE",
@@ -87,9 +117,12 @@
       "id": "hawktech",
       "title": "HawkTech",
       "type": "Mobile App",
-      "tags": ["UX/UI", "E-commerce"],
+      "tags": [
+        "UX/UI",
+        "E-commerce"
+      ],
       "description": "Projekt UX/UI aplikacji e-commerce zaprojektowanej pod szybkie decyzje zakupowe.",
-      "color": "purple", 
+      "color": "purple",
       "themeColor": "#4A3D61",
       "featured": true,
       "caseStudy": {
@@ -122,7 +155,7 @@
     {
       "id": "oddajto",
       "title": "Oddaj.to",
-      "category": "Brand identity", 
+      "category": "Brand identity",
       "description": "Projekt identyfikacji wizualnej promujący ideę oddawania rzeczy zamiast ich wyrzucania.",
       "image": "assets/projects/visual/oddajto-1.png",
       "link": "https://www.behance.net/gallery/246639639/Oddajto-Brand-Identity"
@@ -131,38 +164,93 @@
   "process": {
     "intro": "Proces dostosowuję do problemu projektowego — poniżej pokazuję jego standardowy przebieg od analizy po wdrożenie.",
     "steps": [
-      { "index": "01", "title": "Analiza", "description": "Poznanie celu projektu, grupy docelowej i obecnych wyzwań." },
-      { "index": "02", "title": "Research", "description": "Zbieranie inspiracji, benchmarków i kluczowych insightów UX." },
-      { "index": "03", "title": "Wireframe", "description": "Budowanie struktury ekranu i architektury informacji." },
-      { "index": "04", "title": "UI & Visual Design", "description": "Projekt wizualny interfejsu i spójność z identyfikacją marki." },
-      { "index": "05", "title": "Prototyp i testy", "description": "Interaktywna wersja projektu i szybka iteracja na podstawie feedbacku." },
-      { "index": "06", "title": "Przekazanie", "description": "Przekazanie projektu do wdrożenia i dopracowanie detali po feedbacku zespołu." }
+      {
+        "index": "01",
+        "title": "Analiza",
+        "description": "Poznanie celu projektu, grupy docelowej i obecnych wyzwań."
+      },
+      {
+        "index": "02",
+        "title": "Research",
+        "description": "Zbieranie inspiracji, benchmarków i kluczowych insightów UX."
+      },
+      {
+        "index": "03",
+        "title": "Wireframe",
+        "description": "Budowanie struktury ekranu i architektury informacji."
+      },
+      {
+        "index": "04",
+        "title": "UI & Visual Design",
+        "description": "Projekt wizualny interfejsu i spójność z identyfikacją marki."
+      },
+      {
+        "index": "05",
+        "title": "Prototyp i testy",
+        "description": "Interaktywna wersja projektu i szybka iteracja na podstawie feedbacku."
+      },
+      {
+        "index": "06",
+        "title": "Przekazanie",
+        "description": "Przekazanie projektu do wdrożenia i dopracowanie detali po feedbacku zespołu."
+      }
     ]
   },
   "skills": {
     "tools": [
-      { "icon": "F", "name": "Figma", "description": "UX/UI · prototypy" },
-      { "icon": "Ps", "name": "Photoshop", "description": "Grafika · mockupy" },
-      { "icon": "Ai", "name": "Illustrator", "description": "Wektory · ilustracje" },
-      { "icon": "AI", "name": "AI & Low-code Tools", "description": "AI · prototypowanie" }
+      {
+        "icon": "F",
+        "name": "Figma",
+        "description": "UX/UI · prototypy"
+      },
+      {
+        "icon": "Ps",
+        "name": "Photoshop",
+        "description": "Grafika · mockupy"
+      },
+      {
+        "icon": "Ai",
+        "name": "Illustrator",
+        "description": "Wektory · ilustracje"
+      },
+      {
+        "icon": "AI",
+        "name": "AI & Low-code Tools",
+        "description": "AI · prototypowanie"
+      }
     ],
     "categories": [
       {
         "title": "UX",
-        "items": ["User Flow", "Wireframing", "Prototyping", "UX thinking"]
+        "items": [
+          "User Flow",
+          "Wireframing",
+          "Prototyping",
+          "UX thinking"
+        ]
       },
       {
         "title": "UI",
-        "items": ["Figma", "Design Systems", "Visual Design", "Responsive Design"]
+        "items": [
+          "Figma",
+          "Design Systems",
+          "Visual Design",
+          "Responsive Design"
+        ]
       },
       {
         "title": "Co wnoszę do projektu",
-        "items": ["upraszczanie informacji", "projektowanie decyzji", "spójne systemy UI", "łączenie UX i UI"]
+        "items": [
+          "upraszczanie informacji",
+          "projektowanie decyzji",
+          "spójne systemy UI",
+          "łączenie UX i UI"
+        ]
       }
     ]
   },
   "about": {
-    "kicker": "UX/UI Designerka z podejściem produktowym i doświadczeniem w grafice.",
+    "kicker": "UX/UI Designerka z podejściem produktowym i doświadczeniem w grafice.",
     "paragraphs": [
       "Projektuję produkty cyfrowe, które upraszczają złożone informacje i wspierają użytkownika w podejmowaniu decyzji.",
       "Łączę UX i warstwę wizualną — dbam nie tylko o funkcjonalność, ale też o spójność i jakość odbioru.",
@@ -185,7 +273,7 @@
       "description": "Praca nad materiałami e-learningowymi, layoutami, key visualami i ekranami do prezentacji. Duży nacisk na czytelność informacji i komunikację wizualną."
     },
     "education": {
-      "period": "Edukacja", 
+      "period": "Edukacja",
       "title": "Grafika komputerowa — AHE w Łodzi",
       "description": "Studia licencjackie ze specjalizacją multimedia, skupione na komunikacji wizualnej, projektowaniu cyfrowym i podstawach projektowania interfejsów."
     }
@@ -194,9 +282,18 @@
     {
       "title": "Google UX Design (Coursera)",
       "badges": [
-        { "label": "Certyfikat", "type": "default" },
-        { "label": "2024", "type": "blue" },
-        { "label": "7 kursów", "type": "pink" }
+        {
+          "label": "Certyfikat",
+          "type": "default"
+        },
+        {
+          "label": "2024",
+          "type": "blue"
+        },
+        {
+          "label": "7 kursów",
+          "type": "pink"
+        }
       ],
       "description": "Proces UX, praca w Figma i budowanie prototypów w ramach zadań kursowych.",
       "certificate": {
@@ -210,8 +307,16 @@
     "sublead": "Napisz do mnie.",
     "email": "kordevych.paula@gmail.com",
     "socials": [
-      { "label": "Wyślij maila", "href": "mailto:kordevych.paula@gmail.com", "primary": true },
-      { "label": "Behance", "href": "https://www.behance.net/paulakordevych", "primary": false }
+      {
+        "label": "Wyślij maila",
+        "href": "mailto:kordevych.paula@gmail.com",
+        "primary": true
+      },
+      {
+        "label": "Behance",
+        "href": "https://www.behance.net/paulakordevych",
+        "primary": false
+      }
     ]
   }
 }
