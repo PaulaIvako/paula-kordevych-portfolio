@@ -1,27 +1,24 @@
-# Build stage
+# Etap budowania
 FROM node:20-alpine AS builder
 
 WORKDIR /app
 
-# Copy package files
+# Kopiowanie plików projektu
 COPY package*.json ./
 RUN npm ci
 
-# Copy source files
 COPY . .
-
-# Build the project
 RUN npm run build
 
-# Production stage
-FROM nginxinc/nginx-unprivileged:1.29-alpine
+# Etap produkcyjny
+FROM nginx:alpine
 
-# Copy nginx configuration
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Copy built files from builder stage
+# Kopiowanie skompilowanej aplikacji
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-EXPOSE 8080
+# Kopiowanie konfiguracji nginx
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
 
 CMD ["nginx", "-g", "daemon off;"]

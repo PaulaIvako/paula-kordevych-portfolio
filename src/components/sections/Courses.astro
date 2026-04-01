@@ -1,0 +1,77 @@
+---
+import { Image } from 'astro:assets';
+import projectsData from '../../data/projects.json';
+import certImage from '../../assets/certs/google-ux-design-coursera-certyfikat.png';
+const { courses } = projectsData;
+---
+
+<section id="kursy" class="py-16 md:py-24 px-6 md:px-12 lg:px-20 reveal">
+  <h2 class="font-aboreto text-3xl md:text-4xl text-text dark:text-text-dark text-center mb-8">
+    KURSY
+  </h2>
+  
+  <div class="max-w-5xl mx-auto">
+    {courses.map((course) => (
+      <article class="bg-surface dark:bg-surface-dark rounded-2xl p-10 md:p-12">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <!-- Left side - text info -->
+          <div class="space-y-8">
+            <h3 class="font-aboreto text-2xl md:text-3xl text-text dark:text-text-dark tracking-wide mb-6">
+              {course.title}
+            </h3>
+
+            <div class="flex flex-wrap gap-2">
+              {course.badges.map((badge) => (
+                <span class={`px-3 py-1 text-xs font-montserrat font-medium rounded-full ${
+                  badge.type === 'blue' ? 'bg-accent-blue/10 text-accent-blue' :
+                  badge.type === 'pink' ? 'bg-accent-pink/10 text-accent-pink' :
+                  'bg-surface-strong dark:bg-surface-strong-dark text-muted dark:text-gray-300'
+                }`}>
+                  {badge.label}
+                </span>
+              ))}
+            </div>
+
+            <p class="font-montserrat text-base text-muted dark:text-gray-300 leading-relaxed">
+              {course.description}
+            </p>
+
+            <!-- Buttons inside the card -->
+            <div class="flex flex-wrap gap-3 pt-2">
+              <a
+                href={course.certificate.pdf}
+                target="_blank"
+                rel="noreferrer"
+                class="inline-flex items-center px-6 py-2.5 bg-accent-blue text-white font-montserrat font-medium text-sm rounded-lg hover:bg-accent-blue/90 transition-colors"
+              >
+                Zobacz certyfikat
+              </a>
+              <a
+                href={course.certificate.pdf}
+                download
+                class="inline-flex items-center px-6 py-2.5 text-text dark:text-text-dark font-montserrat font-medium text-sm rounded-lg border border-text dark:border-text-dark hover:text-accent-blue hover:border-accent-blue transition-colors"
+              >
+                Pobierz PDF
+              </a>
+            </div>
+          </div>
+
+          <!-- Right side - certificate image -->
+          <a
+            href={course.certificate.pdf}
+            target="_blank"
+            rel="noreferrer"
+            class="block rounded-xl overflow-hidden shadow-md hover:shadow-xl hover:scale-[1.03] transition-all duration-300"
+          >
+            <img
+              src="/assets/certs/google-ux-design-coursera-certyfikat.png"
+              alt={`Certyfikat ${course.title}`}
+              class="w-full h-auto object-contain"
+              loading="lazy"
+            />
+          </a>
+        </div>
+      </article>
+    ))}
+  </div>
+</section>

@@ -136,16 +136,16 @@
     ],
     "categories": [
       {
-        "title": "Co wnoszę do projektu",
-        "items": ["upraszczanie informacji", "projektowanie decyzji", "spójne systemy UI", "łączenie UX i UI"]
-      },
-      {
         "title": "UX",
         "items": ["User Flow", "Wireframing", "Prototyping", "UX thinking"]
       },
       {
-        "title": "UI", 
+        "title": "UI",
         "items": ["Figma", "Design Systems", "Visual Design", "Responsive Design"]
+      },
+      {
+        "title": "Co wnoszę do projektu",
+        "items": ["upraszczanie informacji", "projektowanie decyzji", "spójne systemy UI", "łączenie UX i UI"]
       }
     ]
   },

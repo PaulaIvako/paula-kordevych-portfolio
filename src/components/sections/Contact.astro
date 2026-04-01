@@ -1,0 +1,36 @@
+---
+import projectsData from '../../data/projects.json';
+const { contact } = projectsData;
+---
+
+<section id="kontakt" class="py-16 md:py-24 px-6 md:px-12 lg:px-20 reveal">
+  <h2 class="font-aboreto text-3xl md:text-4xl text-text dark:text-text-dark text-center mb-8">
+    KONTAKT
+  </h2>
+
+  <div class="text-center mb-10">
+    <p class="font-aboreto text-xl md:text-2xl text-text dark:text-text-dark tracking-wide mb-3">
+      {contact.lead}
+    </p>
+    <p class="font-montserrat text-base text-muted dark:text-gray-300">
+      {contact.sublead}
+    </p>
+  </div>
+
+  <div class="flex flex-wrap justify-center gap-4">
+    <a 
+      href={`mailto:${contact.email}`}
+      class="inline-flex items-center px-8 py-3 bg-accent-blue text-white font-montserrat font-medium text-sm rounded-lg hover:bg-accent-blue/90 transition-colors shadow-lg shadow-accent-blue/25"
+    >
+      Wyślij maila
+    </a>
+    <a 
+      href="https://www.behance.net/paulakordevych"
+      target="_blank"
+      rel="noreferrer"
+      class="inline-flex items-center px-8 py-3 text-text dark:text-text-dark font-montserrat font-medium text-sm rounded-lg border border-text dark:border-text-dark hover:text-accent-blue hover:border-accent-blue transition-colors"
+    >
+      Behance
+    </a>
+  </div>
+</section>

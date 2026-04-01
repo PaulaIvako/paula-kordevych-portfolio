@@ -1,0 +1,60 @@
+---
+import projectsData from '../../data/projects.json';
+const { visualWork } = projectsData;
+---
+
+<section id="visual-work" class="py-16 md:py-24 px-6 md:px-12 lg:px-20 reveal">
+  <h2 class="font-aboreto text-3xl md:text-4xl text-text dark:text-text-dark text-center mb-4">
+    Graphic & Branding
+  </h2>
+  
+  <div class="bg-surface-strong dark:bg-surface-strong-dark rounded-2xl p-8 md:p-12 border border-surface-border dark:border-white/[0.12] shadow-md">
+    <p class="font-montserrat text-base text-muted dark:text-gray-300 mb-8 max-w-3xl">
+      Poza projektami UX/UI tworzę też identyfikacje wizualne i materiały marketingowe.<br />
+      Poniżej pokazuję wybrane projekty brandingowe, które rozwijałam od logo i systemu wizualnego po packaging oraz social media.
+    </p>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {visualWork.map((work) => (
+        <article class="group">
+          <a 
+            href={work.link}
+            target="_blank"
+            rel="noreferrer"
+            class="block rounded-xl overflow-hidden mb-4 border border-surface-border dark:border-white/[0.12] shadow-sm hover:shadow-lg transition-all duration-300"
+          >
+            <img 
+              src={`/assets/projects/visual/${work.image.split('/').pop()}`}
+              alt={work.title}
+              width={600}
+              height={400}
+              class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+            />
+          </a>
+          
+          <p class="font-montserrat text-xs font-medium tracking-wider text-accent-blue mb-2">
+            {work.category}
+          </p>
+          
+          <h3 class="font-aboreto text-xl md:text-2xl text-text dark:text-text-dark mb-2">
+            {work.title}
+          </h3>
+          
+          <p class="font-montserrat text-sm text-muted dark:text-gray-300 mb-4">
+            {work.description}
+          </p>
+          
+          <a
+            href={work.link}
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex items-center px-6 py-2 text-text dark:text-text-dark font-montserrat font-medium text-sm rounded-lg border border-text dark:border-text-dark hover:text-accent-blue hover:border-accent-blue transition-colors"
+          >
+            Więcej
+          </a>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

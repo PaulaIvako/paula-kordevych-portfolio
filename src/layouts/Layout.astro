@@ -1,0 +1,94 @@
+---
+import deployToken from "../data/deploy-token.json";
+
+export interface Props {
+  title?: string;
+  description?: string;
+  themeColor?: string;
+}
+
+const { 
+  title = "Portfolio | Paula Kordevych", 
+  description = "Portfolio UX/UI Designerki Pauli Kordevych: case study, proces pracy, umiejętności i kontakt.",
+  themeColor = "#F4F2EA"
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content={themeColor} />
+    <meta name="deploy-token" content={deployToken.token} />
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/Favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/Favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/Favicon/favicon-16x16.png" />
+    <link rel="manifest" href="/Favicon/site.webmanifest" />
+    <link rel="shortcut icon" href="/Favicon/favicon.ico" />
+    <meta name="msapplication-TileColor" content={themeColor} />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Aboreto&family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-bg text-text antialiased transition-colors duration-300">
+    <slot />
+    
+    <!-- Scroll to top button -->
+    <button id="scroll-top" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-surface-strong border border-surface-border shadow-lg backdrop-blur-nav opacity-0 invisible transition-all duration-300 hover:scale-110 z-50" aria-label="Wróć do góry">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mx-auto text-text" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+      </svg>
+    </button>
+    
+    <script is:inline src="/scripts/theme.js"></script>
+  </body>
+</html>
+
+<style is:global>
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--muted);
+    border-radius: 4px;
+  }
+  
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+  
+  /* Reveal animation */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>

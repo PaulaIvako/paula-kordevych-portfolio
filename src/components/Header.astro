@@ -1,0 +1,46 @@
+---
+const navItems = [
+  { label: 'Strona główna', href: '/', id: 'home' },
+  { label: 'Projekty', href: '/#projekty', id: 'projects' },
+  { label: 'O mnie', href: '/#o-mnie', id: 'about' },
+  { label: 'Kontakt', href: '/#kontakt', id: 'contact' }
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 h-[62px] border-b border-line dark:border-line-dark bg-nav/70 dark:bg-nav-dark/80 backdrop-blur-nav transition-colors duration-300">
+  <div class="max-w-layout mx-auto h-full flex items-center justify-center px-6">
+    <nav class="flex items-center gap-2 text-xs tracking-wide overflow-x-auto scrollbar-hide" aria-label="Nawigacja">
+      {navItems.map((item, index) => (
+        <>
+          {index > 0 && <span class="text-muted/30 px-2">|</span>}
+          <a 
+            href={item.href}
+            class="text-muted dark:text-gray-300 hover:text-text dark:hover:text-text-dark transition-colors whitespace-nowrap py-2 px-3"
+          >
+            {item.label}
+          </a>
+        </>
+      ))}
+    </nav>
+    
+    <button 
+      id="theme-toggle" 
+      class="absolute right-6 w-10 h-10 rounded-full bg-surface-strong dark:bg-surface-strong-dark border border-surface-border dark:border-white/[0.12] flex items-center justify-center hover:scale-110 transition-transform"
+      aria-label="Przełącz tryb ciemny"
+    >
+      <span id="theme-icon" class="text-lg">🌙</span>
+    </button>
+  </div>
+</header>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
