@@ -52,20 +52,29 @@ const {
     <script>
       // Dynamic scroll button positioning
       const scrollBtn = document.getElementById('scroll-top');
-      const footerOffset = 220; // Distance from footer when at bottom
+      const footerHeight = 100; // Footer height to avoid
       
       function updateButtonPosition() {
         const scrollY = window.scrollY;
         const windowHeight = window.innerHeight;
         const docHeight = document.documentElement.scrollHeight;
-        const scrollBottom = scrollY + windowHeight;
-        const distanceFromBottom = docHeight - scrollBottom;
+        const maxScroll = docHeight - windowHeight;
         
-        // If near footer, position higher; otherwise keep low
-        if (distanceFromBottom < footerOffset) {
-          scrollBtn.style.bottom = (footerOffset - distanceFromBottom + 32) + 'px';
+        // Calculate how close we are to bottom (0 to 1)
+        const scrollProgress = scrollY / maxScroll;
+        
+        // When at top: bottom = 32px (2rem)
+        // When at bottom: bottom = footerHeight + 32px (above footer)
+        const basePosition = 32;
+        const endPosition = footerHeight + 32;
+        
+        // Smooth transition based on scroll progress
+        if (scrollProgress > 0.85) {
+          // Near bottom - fixed position above footer
+          scrollBtn.style.bottom = endPosition + 'px';
         } else {
-          scrollBtn.style.bottom = '2rem';
+          // Normal scrolling - stay low
+          scrollBtn.style.bottom = basePosition + 'px';
         }
       }
       
