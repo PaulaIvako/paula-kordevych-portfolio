@@ -20,32 +20,46 @@ const images = [
 
 <Layout title="Nimbus | Case Study">
   <main class="bg-bg dark:bg-bg-dark min-h-screen">
-    <!-- Hero Section -->
-    <section class="py-16 md:py-24 px-6 md:px-12 lg:px-20 bg-project-green/30">
-      <div class="max-w-4xl mx-auto text-center">
-        <a href="/#projekty" class="inline-flex items-center gap-2 font-montserrat text-sm text-muted dark:text-gray-300 hover:text-accent-blue transition-colors mb-8">
+    <!-- Hero Section - New Layout -->
+    <section class="pt-8 pb-16 md:pb-24 px-6 md:px-12 lg:px-20 bg-project-green/30">
+      <div class="max-w-6xl mx-auto">
+        <!-- Back link -->
+        <a href="/#projekty" class="inline-flex items-center gap-2 font-montserrat text-sm text-muted dark:text-gray-300 hover:text-accent-blue transition-colors mb-12 md:mb-16">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
           Powrót do projektów
         </a>
         
-        <h1 class="font-aboreto text-4xl md:text-6xl text-text dark:text-text-dark mb-6">
-          Nimbus
-        </h1>
-        
-        <p class="font-montserrat text-lg md:text-xl text-muted dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-          Koncepcja aplikacji pomagającej szybko zidentyfikować problem rośliny i dobrać odpowiednie działania pielęgnacyjne.
-        </p>
-        
-        <div class="flex flex-wrap justify-center gap-4 mb-12">
-          <div class="bg-surface-strong dark:bg-surface-strong-dark rounded-xl p-6 border border-surface-border dark:border-white/[0.12]">
-            <p class="font-montserrat text-xs font-medium tracking-wider text-accent-blue mb-2">PROBLEM</p>
-            <p class="font-montserrat text-sm text-text dark:text-text-dark">Użytkownik potrzebuje szybkiej diagnozy i jasnych zaleceń</p>
+        <!-- Main content grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start mb-16">
+          <!-- Left: Title -->
+          <div>
+            <h1 class="font-aboreto text-5xl md:text-7xl lg:text-8xl text-text dark:text-text-dark leading-none">
+              Nimbus
+            </h1>
           </div>
-          <div class="bg-surface-strong dark:bg-surface-strong-dark rounded-xl p-6 border border-surface-border dark:border-white/[0.12]">
-            <p class="font-montserrat text-xs font-medium tracking-wider text-accent-blue mb-2">ZAKRES</p>
-            <p class="font-montserrat text-sm text-text dark:text-text-dark">UX research, flow, UI, struktura informacji</p>
+          
+          <!-- Right: Description -->
+          <div class="lg:pt-4">
+            <p class="font-montserrat text-lg md:text-xl text-muted dark:text-gray-300 leading-relaxed">
+              Koncepcja aplikacji pomagającej szybko zidentyfikować problem rośliny i dobrać odpowiednie działania pielęgnacyjne.
+            </p>
+          </div>
+        </div>
+        
+        <!-- Info boxes - horizontal layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+          <!-- Problem box -->
+          <div class="border-l-2 border-accent-blue pl-6 py-2">
+            <p class="font-montserrat text-xs font-medium tracking-wider text-accent-blue mb-2 uppercase">Problem</p>
+            <p class="font-montserrat text-base text-text dark:text-text-dark">Użytkownik potrzebuje szybkiej diagnozy i jasnych zaleceń</p>
+          </div>
+          
+          <!-- Scope box -->
+          <div class="border-l-2 border-accent-blue pl-6 py-2">
+            <p class="font-montserrat text-xs font-medium tracking-wider text-accent-blue mb-2 uppercase">Zakres</p>
+            <p class="font-montserrat text-base text-text dark:text-text-dark">UX research, flow, UI, struktura informacji</p>
           </div>
         </div>
       </div>
