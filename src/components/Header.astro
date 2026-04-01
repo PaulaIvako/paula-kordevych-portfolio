@@ -11,10 +11,20 @@ const currentPath = Astro.url.pathname;
 
 <header class="sticky top-0 z-50 h-[62px] border-b border-line dark:border-line-dark bg-nav/70 dark:bg-nav-dark/80 backdrop-blur-nav transition-colors duration-300">
   <div class="max-w-layout mx-auto h-full flex items-center justify-between px-3 sm:px-6">
-    <!-- Logo/Name on mobile -->
-    <a href="/" class="sm:hidden font-aboreto text-sm text-text dark:text-text-dark whitespace-nowrap">
-      Paula Kordevych
-    </a>
+    <!-- Mobile nav only -->
+    <nav class="flex sm:hidden items-center gap-0 text-[10px] tracking-wide" aria-label="Nawigacja mobile">
+      {navItems.map((item, index) => (
+        <>
+          {index > 0 && <span class="text-muted/30 px-0.5">|</span>}
+          <a
+            href={item.href}
+            class="text-muted dark:text-gray-300 hover:text-text dark:hover:text-text-dark transition-colors whitespace-nowrap py-2 px-1"
+          >
+            {item.shortLabel}
+          </a>
+        </>
+      ))}
+    </nav>
 
     <nav class="hidden sm:flex items-center gap-1 text-xs tracking-wide" aria-label="Nawigacja">
       {navItems.map((item, index) => (
@@ -25,21 +35,6 @@ const currentPath = Astro.url.pathname;
             class="text-muted dark:text-gray-300 hover:text-text dark:hover:text-text-dark transition-colors whitespace-nowrap py-2 px-2 text-[11px] md:text-xs"
           >
             {item.label}
-          </a>
-        </>
-      ))}
-    </nav>
-
-    <!-- Mobile nav - shorter -->
-    <nav class="flex sm:hidden items-center gap-0 text-[10px] tracking-wide" aria-label="Nawigacja mobile">
-      {navItems.map((item, index) => (
-        <>
-          {index > 0 && <span class="text-muted/30 px-0.5">|</span>}
-          <a
-            href={item.href}
-            class="text-muted dark:text-gray-300 hover:text-text dark:hover:text-text-dark transition-colors whitespace-nowrap py-2 px-1"
-          >
-            {item.shortLabel}
           </a>
         </>
       ))}
