@@ -34,7 +34,7 @@ const isCaseStudy = currentPath.startsWith('/projects/');
           {index > 0 && <span class="text-muted/30 px-1">|</span>}
           <a
             href={item.href}
-            class={`transition-colors whitespace-nowrap py-2 px-2 text-[11px] md:text-xs ${
+            class={`transition-colors whitespace-nowrap py-2 px-2 text-xs ${
               (item.id === 'projects' && isCaseStudy)
                 ? 'text-accent-blue dark:text-[#DB5700] font-medium'
                 : 'text-text dark:text-text-dark'
