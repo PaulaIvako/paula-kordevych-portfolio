@@ -7,6 +7,7 @@ const navItems = [
 ];
 
 const currentPath = Astro.url.pathname;
+const isHomePage = currentPath === '/';
 ---
 
 <header class="sticky top-0 z-50 h-[62px] border-b border-line dark:border-line-dark bg-nav/70 dark:bg-nav-dark/80 backdrop-blur-nav transition-colors duration-300">
@@ -18,7 +19,11 @@ const currentPath = Astro.url.pathname;
           {index > 0 && <span class="text-muted/30 px-0.5">|</span>}
           <a
             href={item.href}
-            class="text-muted dark:text-gray-300 hover:text-text dark:hover:text-text-dark transition-colors whitespace-nowrap py-2 px-1"
+            class={`transition-colors whitespace-nowrap py-2 px-1 ${
+              (item.id === 'home' && isHomePage) || (item.id !== 'home' && currentPath.includes(item.id))
+                ? 'text-accent-blue dark:text-[#DB5700] font-medium'
+                : 'text-muted dark:text-gray-300 hover:text-text dark:hover:text-text-dark'
+            }`}
           >
             {item.shortLabel}
           </a>
@@ -32,7 +37,11 @@ const currentPath = Astro.url.pathname;
           {index > 0 && <span class="text-muted/30 px-1">|</span>}
           <a
             href={item.href}
-            class="text-muted dark:text-gray-300 hover:text-text dark:hover:text-text-dark transition-colors whitespace-nowrap py-2 px-2 text-[11px] md:text-xs"
+            class={`transition-colors whitespace-nowrap py-2 px-2 text-[11px] md:text-xs ${
+              (item.id === 'home' && isHomePage) || (item.id !== 'home' && currentPath.includes(item.id))
+                ? 'text-accent-blue dark:text-[#DB5700] font-medium'
+                : 'text-muted dark:text-gray-300 hover:text-text dark:hover:text-text-dark'
+            }`}
           >
             {item.label}
           </a>
