@@ -16,7 +16,7 @@ const colorClasses: Record<string, string> = {
 
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
     {projects.map((project) => (
-      <article class="group bg-surface-strong dark:bg-surface-strong-dark rounded-2xl overflow-hidden border border-surface-border dark:border-white/[0.12] shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col min-h-[420px] sm:min-h-[480px]">
+      <article class="group bg-gradient-to-br from-surface-strong to-surface dark:from-surface-strong-dark dark:to-surface-dark rounded-2xl overflow-hidden border border-surface-border dark:border-white/[0.12] shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col min-h-[420px] sm:min-h-[480px]">
         <!-- Card top with color -->
         <div class={`h-36 sm:h-48 ${colorClasses[project.color] || 'bg-gray-200'} flex items-center justify-center relative overflow-hidden`}>
           <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent"></div>
@@ -45,7 +45,7 @@ const colorClasses: Record<string, string> = {
 
           <a
             href={`/projects/${project.id}`}
-            class="inline-flex items-center px-4 py-2 text-text dark:text-text-dark font-montserrat font-medium text-sm rounded-lg border border-text dark:border-text-dark hover:text-accent-blue hover:border-accent-blue transition-colors mt-auto w-fit"
+            class="inline-flex items-center px-4 py-2 text-text dark:text-text-dark font-montserrat font-medium text-sm rounded-lg border border-text dark:border-text-dark hover:text-accent-blue hover:border-accent-blue hover:bg-gradient-to-r hover:from-accent-blue/5 hover:to-accent-pink/5 dark:hover:from-[#DB5700]/5 dark:hover:to-[#DB5700]/10 transition-all duration-300 mt-auto w-fit"
           >
             Więcej
           </a>

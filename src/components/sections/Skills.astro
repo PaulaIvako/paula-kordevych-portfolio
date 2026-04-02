@@ -12,8 +12,8 @@ const { skills } = projectsData;
     <!-- Tools -->
     <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mb-8">
       {skills.tools.map((tool) => (
-        <div class="text-center p-3 sm:p-6 bg-surface dark:bg-surface-dark rounded-xl border border-surface-border dark:border-white/[0.12]">
-          <span class="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-accent-blue/10 text-accent-blue font-montserrat font-bold text-base sm:text-lg mb-2 sm:mb-3">
+        <div class="text-center p-3 sm:p-6 bg-gradient-to-br from-surface to-surface-strong dark:from-surface-dark dark:to-surface-strong-dark rounded-xl border border-surface-border dark:border-white/[0.12] hover:shadow-md transition-all duration-300">
+          <span class="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br from-accent-blue/20 to-accent-blue/5 dark:from-[#DB5700]/20 dark:to-[#DB5700]/5 text-accent-blue dark:text-[#DB5700] font-montserrat font-bold text-base sm:text-lg mb-2 sm:mb-3">
             {tool.icon}
           </span>
           <h3 class="font-montserrat text-xs sm:text-sm font-medium text-text dark:text-text-dark mb-1">
