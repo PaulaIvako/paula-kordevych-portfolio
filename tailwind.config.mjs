@@ -7,7 +7,7 @@ export default {
       colors: {
         bg: {
           DEFAULT: '#faf9f3',
-          dark: '#1a1a1a'
+          dark: '#0E0707'
         },
         surface: {
           DEFAULT: 'rgba(255, 255, 255, 0.35)',

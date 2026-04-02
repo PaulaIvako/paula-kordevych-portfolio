@@ -89,6 +89,15 @@ const {
 </html>
 
 <style is:global>
+  /* CSS Variables for theming */
+  :root {
+    --accent-blue: #5373f3;
+  }
+  
+  .dark {
+    --accent-blue: #DB5700;
+  }
+  
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;
@@ -127,5 +136,31 @@ const {
   .reveal.in {
     opacity: 1;
     transform: translateY(0);
+  }
+  
+  /* Dark mode accent color override */
+  .dark .bg-accent-blue {
+    background-color: #DB5700;
+  }
+  .dark .text-accent-blue {
+    color: #DB5700;
+  }
+  .dark .border-accent-blue {
+    border-color: #DB5700;
+  }
+  .dark .hover\:text-accent-blue:hover {
+    color: #DB5700;
+  }
+  .dark .hover\:border-accent-blue:hover {
+    border-color: #DB5700;
+  }
+  .dark .hover\:bg-accent-blue\/90:hover {
+    background-color: rgba(219, 87, 0, 0.9);
+  }
+  .dark .bg-accent-blue\/10 {
+    background-color: rgba(219, 87, 0, 0.1);
+  }
+  .dark .shadow-accent-blue\/25 {
+    --tw-shadow-color: rgba(219, 87, 0, 0.25);
   }
 </style>
