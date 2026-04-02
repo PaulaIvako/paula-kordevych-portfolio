@@ -28,21 +28,18 @@ const isCaseStudy = currentPath.startsWith('/projects/');
       ))}
     </nav>
 
-    <nav class="hidden sm:flex items-center gap-1 text-xs tracking-wide mx-auto" aria-label="Nawigacja">
-      {navItems.map((item, index) => (
-        <>
-          {index > 0 && <span class="text-muted/30 px-1">|</span>}
-          <a
-            href={item.href}
-            class={`transition-all duration-200 whitespace-nowrap py-2 px-2 text-[11px] md:text-xs rounded-lg ${
-              (item.id === 'home' && isHomePage && !isCaseStudy) || (item.id === 'projects' && isCaseStudy)
-                ? 'text-accent-blue dark:text-[#DB5700] font-medium bg-accent-blue/10 dark:bg-[#DB5700]/10'
-                : 'text-text dark:text-text-dark hover:text-accent-blue dark:hover:text-[#DB5700] hover:bg-accent-blue/5 dark:hover:bg-[#DB5700]/5'
-            }`}
-          >
-            {item.label}
-          </a>
-        </>
+    <nav class="hidden sm:flex items-center gap-2 text-xs tracking-wide mx-auto" aria-label="Nawigacja">
+      {navItems.map((item) => (
+        <a
+          href={item.href}
+          class={`transition-all duration-200 whitespace-nowrap py-2 px-4 text-[11px] md:text-xs rounded-lg border ${
+            (item.id === 'home' && isHomePage && !isCaseStudy) || (item.id === 'projects' && isCaseStudy)
+              ? 'border-accent-blue dark:border-[#DB5700] text-accent-blue dark:text-[#DB5700] font-medium'
+              : 'border-text dark:border-text-dark text-text dark:text-text-dark hover:border-accent-blue dark:hover:border-[#DB5700] hover:text-accent-blue dark:hover:text-[#DB5700]'
+          }`}
+        >
+          {item.label}
+        </a>
       ))}
     </nav>
 
