@@ -14,13 +14,13 @@ const isCaseStudy = currentPath.startsWith('/projects/');
 <header class="sticky top-0 z-50 h-[62px] border-b border-line dark:border-line-dark bg-nav/70 dark:bg-nav-dark/80 backdrop-blur-nav transition-colors duration-300">
   <div class="max-w-layout mx-auto h-full flex items-center px-3 sm:px-6 relative">
     <!-- Mobile nav centered -->
-    <nav class="flex sm:hidden items-center justify-center gap-0 text-[10px] tracking-wide w-full" aria-label="Nawigacja mobile">
+    <nav class="flex sm:hidden items-center justify-center gap-1 text-xs tracking-wide w-full" aria-label="Nawigacja mobile">
       {navItems.map((item, index) => (
         <>
-          {index > 0 && <span class="text-muted/30 px-0.5">|</span>}
+          {index > 0 && <span class="text-muted/30 px-1">|</span>}
           <a
             href={item.href}
-            class="text-text dark:text-text-dark transition-colors whitespace-nowrap py-2 px-1"
+            class="text-text dark:text-text-dark transition-colors whitespace-nowrap py-2 px-2"
           >
             {item.shortLabel}
           </a>
