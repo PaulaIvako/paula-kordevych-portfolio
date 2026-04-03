@@ -186,7 +186,7 @@
       },
       {
         "index": "05",
-        "title": "Prototyp i testy",
+        "title": "Prototyp i testy",
         "description": "Interaktywna wersja projektu i szybka iteracja na podstawie feedbacku."
       },
       {
@@ -244,13 +244,13 @@
           "upraszczanie informacji",
           "projektowanie decyzji",
           "spójne systemy UI",
-          "łączenie UX i UI"
+          "łączenie UX i UI"
         ]
       }
     ]
   },
   "about": {
-    "kicker": "UX/UI Designerka z podejściem produktowym i doświadczeniem w grafice.",
+"kicker": "UX/UI Designerka z\u00A0podejściem produktowym i\u00A0doświadczeniem w\u00A0grafice.",
     "paragraphs": [
       "Projektuję produkty cyfrowe, które upraszczają złożone informacje i wspierają użytkownika w podejmowaniu decyzji.",
       "Łączę UX i warstwę wizualną — dbam nie tylko o funkcjonalność, ale też o spójność i jakość odbioru.",
@@ -274,7 +274,7 @@
     },
     "education": {
       "period": "Edukacja",
-      "title": "Grafika komputerowa — AHE w Łodzi",
+      "title": "Grafika komputerowa — AHE w Łodzi",
       "description": "Studia licencjackie ze specjalizacją multimedia, skupione na komunikacji wizualnej, projektowaniu cyfrowym i podstawach projektowania interfejsów."
     }
   },
