@@ -23,11 +23,13 @@ const { about } = projectsData;
       
       <!-- Kafelek 2: Zdjęcie -->
       <div class="md:col-span-2 bg-gradient-to-br from-accent-blue/5 to-accent-pink/5 dark:from-accent-blue/10 dark:to-accent-pink/10 rounded-2xl border border-line dark:border-line-dark overflow-hidden">
-        <img 
-          src="/assets/about/paula.jpg"
-          alt="Paula Kordevych"
-          class="w-full h-full object-cover aspect-[3/4] sm:aspect-square sm:max-h-[280px] md:max-h-none md:aspect-square"
-        />
+        <div class="relative w-full aspect-[3/4] sm:aspect-[16/9] md:aspect-square">
+          <img 
+            src="/assets/about/paula.jpg"
+            alt="Paula Kordevych"
+            class="absolute inset-0 w-full h-full object-cover"
+          />
+        </div>
       </div>
       
       <!-- Kafelek 3: Wszystkie paragrafy razem -->
