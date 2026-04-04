@@ -11,36 +11,35 @@ const { about } = projectsData;
       O MNIE
     </h2>
     
-    <!-- Minimalistyczny Bento - 3 kafelki -->
-    <div class="grid grid-cols-1 md:grid-cols-5 gap-4 md:gap-5">
+    <!-- Bento Grid - tylko tekst -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
       
-      <!-- Kafelek 1: Kicker - duży, szeroki -->
-      <div class="md:col-span-5 bg-surface dark:bg-surface-dark rounded-2xl p-6 md:p-8 border border-line dark:border-line-dark">
+      <!-- Kafelek 1: Kicker - szeroki -->
+      <div class="md:col-span-2 bg-surface dark:bg-surface-dark rounded-2xl p-6 md:p-8 border border-line dark:border-line-dark">
         <p class="font-aboreto text-xl md:text-2xl lg:text-3xl text-text dark:text-text-dark tracking-wide leading-tight">
           {about.kicker}
         </p>
       </div>
       
-      <!-- Kafelek 2: Zdjęcie -->
-      <div class="md:col-span-2 bg-gradient-to-br from-accent-blue/5 to-accent-pink/5 dark:from-accent-blue/10 dark:to-accent-pink/10 rounded-2xl border border-line dark:border-line-dark overflow-hidden">
-        <div class="relative w-full aspect-[3/4] sm:aspect-[16/9] md:aspect-square">
-          <img 
-            src="/assets/about/paula.jpg"
-            alt="Paula Kordevych"
-            class="absolute inset-0 w-full h-full object-cover"
-          />
-        </div>
+      <!-- Kafelek 2: Paragraf 1 -->
+      <div class="bg-surface/50 dark:bg-surface-dark/50 rounded-2xl p-6 md:p-8 border border-line dark:border-line-dark">
+        <p class="font-montserrat text-sm md:text-base text-muted dark:text-gray-300 leading-relaxed">
+          {about.paragraphs[0]}
+        </p>
       </div>
       
-      <!-- Kafelek 3: Wszystkie paragrafy razem -->
-      <div class="col-span-1 sm:col-span-2 md:col-span-3 bg-surface/50 dark:bg-surface-dark/50 rounded-2xl p-6 md:p-8 border border-line dark:border-line-dark">
-        <div class="space-y-4">
-          {about.paragraphs.map((paragraph, index) => (
-            <p class={`font-montserrat text-sm md:text-base text-muted dark:text-gray-300 leading-relaxed ${index === about.paragraphs.length - 1 ? '' : 'border-b border-line/20 dark:border-line-dark/20 pb-4'}`}>
-              {paragraph}
-            </p>
-          ))}
-        </div>
+      <!-- Kafelek 3: Paragraf 2 -->
+      <div class="bg-surface/50 dark:bg-surface-dark/50 rounded-2xl p-6 md:p-8 border border-line dark:border-line-dark">
+        <p class="font-montserrat text-sm md:text-base text-muted dark:text-gray-300 leading-relaxed">
+          {about.paragraphs[1]}
+        </p>
+      </div>
+      
+      <!-- Kafelek 4: Paragraf 3 - szeroki -->
+      <div class="md:col-span-2 bg-surface dark:bg-surface-dark rounded-2xl p-6 md:p-8 border border-line dark:border-line-dark">
+        <p class="font-montserrat text-sm md:text-base text-muted dark:text-gray-300 leading-relaxed">
+          {about.paragraphs[2]}
+        </p>
       </div>
       
     </div>
